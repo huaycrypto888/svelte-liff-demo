@@ -18,6 +18,7 @@
 
   // testget()
   // addChild();
+  testput();
   const agent = navigator.userAgent;
   let coords = [0, 0];
   let profile = {};
