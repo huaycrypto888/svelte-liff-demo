@@ -60,7 +60,6 @@
       const response = await fetch('https://chickenad.vercel.app/api/customers');
       let total = "x";
       total = await response.json();
-      
       window.alert(total.message)
     }
   
@@ -93,7 +92,8 @@
         'content-type': 'application/json'
       }
     });
-
+    let message = await response.json();
+    window.alert(message)
     // const response = await fetch('https://chickenad.vercel.app/api/customers', {
     //   method: 'POST',
     //   body: JSON.stringify({ root, child }),
@@ -101,9 +101,6 @@
     //     'content-type': 'application/json'
     //   }
     // });
-
-    total = await response.json();
-    console.log(total)
 
   }
 
