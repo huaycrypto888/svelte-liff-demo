@@ -16,8 +16,8 @@
   //   })
   // );
 
-  testget()
-  // addChild();
+  // testget()
+  addChild();
   const agent = navigator.userAgent;
   let coords = [0, 0];
   let profile = {};
