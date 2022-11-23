@@ -51,6 +51,10 @@
 
   const shareTarket = () => {
     // alert(window.location.search)
+
+    
+    sendMessage();
+   
     const message = liff.shareTargetPicker([
       {
         type: "flex",
@@ -161,7 +165,7 @@
   };
 
 
-  const sendMessage = () => {
+  async function sendMessage() {
    
     const message = [
       {
@@ -325,14 +329,16 @@
   {#await promise}
     <p>LIFF init...</p>
   {:then}
-    <p>LIFF init succeeded.</p>
+  <a href="https://line.me/R/ti/p/@701fnoik"><img src="https://i.ibb.co/FgxhQFB/logo-tanggai-00001.jpg" alt="แทงไก่" border="0" /></a>
+  <button class="button-91" on:click={(shareTarket)}>   แชร์   </button>
+  <button on:click={sendMessage}>Send Message</button>
     <div class="button">
       <button on:click={shareTarket}>share</button>
-      <button on:click={sendMessage}>Send Message</button>
+      <!-- <button on:click={sendMessage}>Send Message</button> -->
       
     </div>
 
-    <hr />
+    <!-- <hr />
     <h3>User Info</h3>
     <ul>
       <li>
@@ -344,10 +350,10 @@
         <strong>User Agent</strong>
         :<span>{agent}</span>
       </li>
-    </ul>
+    </ul> -->
     <h4 class="error">{errorMessage}</h4>
-    <hr />
-    <h3>LIFF Info</h3>
+    <!-- <hr /> -->
+    <!-- <h3>LIFF Info</h3>
     <ul>
       <li>
         <strong>LIFF Browser</strong>
@@ -373,9 +379,9 @@
         <strong>LINE Ver</strong>
         :<span>{liff.getLineVersion()}</span>
       </li>
-    </ul>
+    </ul> -->
     <hr />
-    <h3>LIFF QR Code</h3>
+    <h3>เพิ่มเพื่อนผ่าน QR Code</h3>
     <img src="./liff-qr.png" alt="" />
   {:catch e}
     <p>LIFF init failed.</p>
@@ -408,4 +414,24 @@
   li span {
     margin: 5px;
   }
+
+
+  .button-91 {
+  color: #fff;
+  padding: 15px 25px;
+  background-color: #38D2D2;
+  background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25), inset 0px 3px 9px rgba(255, 255, 255, 0.3), inset 0px 1px 1px rgba(255, 255, 255, 0.6), inset 0px -8px 36px rgba(0, 0, 0, 0.3), inset 0px 1px 5px rgba(255, 255, 255, 0.6), 2px 19px 31px rgba(0, 0, 0, 0.2);
+  border-radius: 14px;
+  font-weight: bold;
+  font-size: 16px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+  cursor: pointer;
+}
 </style>
