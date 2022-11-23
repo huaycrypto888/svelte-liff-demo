@@ -165,151 +165,178 @@
   };
 
 
-  async function sendMessage() {
+
+
+
+          async function sendMessage() {
    
-    const message = [
-      {
-        type: "flex",
-        altText: "this is a flex message",
-        contents: {
-          "type": "bubble",
-          "hero": {
-            "type": "image",
-            "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png",
-            "size": "full",
-            "aspectRatio": "20:13",
-            "aspectMode": "cover",
-            "action": {
-              "type": "uri",
-              "uri": "http://linecorp.com/"
-            }
-          },
-          "body": {
-            "type": "box",
-            "layout": "vertical",
-            "contents": [
-              {
-                "type": "text",
-                "text": "แทงไก่ ออโต้",
-                "weight": "bold",
-                "size": "xl"
-              },
-              {
-                "type": "box",
-                "layout": "baseline",
-                "margin": "md",
-                "contents": [
-                  {
-                    "type": "icon",
-                    "size": "sm",
-                    "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-                  },
-                  {
-                    "type": "icon",
-                    "size": "sm",
-                    "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-                  },
-                  {
-                    "type": "icon",
-                    "size": "sm",
-                    "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-                  },
-                  {
-                    "type": "icon",
-                    "size": "sm",
-                    "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-                  },
-                  {
-                    "type": "icon",
-                    "size": "sm",
-                    "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-                  },
-                  {
-                    "type": "text",
-                    "text": "การันตีระดับ 5 ดาว",
-                    "size": "sm",
-                    "color": "#999999",
-                    "margin": "md",
-                    "flex": 0
-                  }
-                ]
-              },
-              {
-                "type": "box",
-                "layout": "vertical",
-                "margin": "lg",
-                "spacing": "sm",
-                "contents": [
-                  {
-                    "type": "box",
-                    "layout": "baseline",
-                    "spacing": "sm",
-                    "contents": [
-                      {
-                        "type": "text",
-                        "text": "ร่วมเป็นส่วนหนึ่งกับเรา รับผลประโยชน์ 30%",
-                        "wrap": true,
-                        "color": "#666666",
-                        "size": "sm",
-                        "flex": 5
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          "footer": {
-            "type": "box",
-            "layout": "vertical",
-            "spacing": "sm",
-            "contents": [
-              {
-                "type": "button",
-                "style": "primary",
-                "height": "sm",
-                "action": {
-                  "type": "uri",
-                  "label": "สมัคร",
-                  "uri": "https://linecorp.com"
-                }
-              },
-              {
-                "type": "button",
-                "style": "primary",
-                "height": "sm",
-                "action": {
-                  "type": "uri",
-                  "label": "share",
-                  "uri": "https://liff.line.me/1657611539-z41ew0PW"
-                },
-                "color": "#3482FA"
-              },
-              {
-                "type": "box",
-                "layout": "vertical",
-                "contents": [],
-                "margin": "sm"
-              }
-            ],
-            "flex": 0
-          }
-        },
-      },
-    ];
-    if (!liff.isInClient()) {
-      window.alert(errorMessage);
-    } else {
-      liff
-        .sendMessages(message)
-        .then(() => {
-          liff.closeWindow();
-        })
-        .catch((error) => {
-          window.alert("Error sending message: " + error);
-        });
+   const message = [
+    {
+      type: "text",
+      text: "Goodjob Man",
     }
-  };
+  ];
+  if (!liff.isInClient()) {
+    window.alert(errorMessage);
+  } else {
+    liff
+      .sendMessages(message)
+      .then(() => {
+        liff.closeWindow();
+      })
+      .catch((error) => {
+        window.alert("Error sending message: " + error);
+      });
+  }
+};
+
+
+
+  // async function sendMessage() {
+   
+  //    const message = [
+  //     {
+  //       type: "flex",
+  //       altText: "this is a flex message",
+  //       contents: {
+  //         "type": "bubble",
+  //         "hero": {
+  //           "type": "image",
+  //           "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png",
+  //           "size": "full",
+  //           "aspectRatio": "20:13",
+  //           "aspectMode": "cover",
+  //           "action": {
+  //             "type": "uri",
+  //             "uri": "http://linecorp.com/"
+  //           }
+  //         },
+  //         "body": {
+  //           "type": "box",
+  //           "layout": "vertical",
+  //           "contents": [
+  //             {
+  //               "type": "text",
+  //               "text": "แทงไก่ ออโต้",
+  //               "weight": "bold",
+  //               "size": "xl"
+  //             },
+  //             {
+  //               "type": "box",
+  //               "layout": "baseline",
+  //               "margin": "md",
+  //               "contents": [
+  //                 {
+  //                   "type": "icon",
+  //                   "size": "sm",
+  //                   "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+  //                 },
+  //                 {
+  //                   "type": "icon",
+  //                   "size": "sm",
+  //                   "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+  //                 },
+  //                 {
+  //                   "type": "icon",
+  //                   "size": "sm",
+  //                   "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+  //                 },
+  //                 {
+  //                   "type": "icon",
+  //                   "size": "sm",
+  //                   "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+  //                 },
+  //                 {
+  //                   "type": "icon",
+  //                   "size": "sm",
+  //                   "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+  //                 },
+  //                 {
+  //                   "type": "text",
+  //                   "text": "การันตีระดับ 5 ดาว",
+  //                   "size": "sm",
+  //                   "color": "#999999",
+  //                   "margin": "md",
+  //                   "flex": 0
+  //                 }
+  //               ]
+  //             },
+  //             {
+  //               "type": "box",
+  //               "layout": "vertical",
+  //               "margin": "lg",
+  //               "spacing": "sm",
+  //               "contents": [
+  //                 {
+  //                   "type": "box",
+  //                   "layout": "baseline",
+  //                   "spacing": "sm",
+  //                   "contents": [
+  //                     {
+  //                       "type": "text",
+  //                       "text": "ร่วมเป็นส่วนหนึ่งกับเรา รับผลประโยชน์ 30%",
+  //                       "wrap": true,
+  //                       "color": "#666666",
+  //                       "size": "sm",
+  //                       "flex": 5
+  //                     }
+  //                   ]
+  //                 }
+  //               ]
+  //             }
+  //           ]
+  //         },
+  //         "footer": {
+  //           "type": "box",
+  //           "layout": "vertical",
+  //           "spacing": "sm",
+  //           "contents": [
+  //             {
+  //               "type": "button",
+  //               "style": "primary",
+  //               "height": "sm",
+  //               "action": {
+  //                 "type": "uri",
+  //                 "label": "สมัคร",
+  //                 "uri": "https://linecorp.com"
+  //               }
+  //             },
+  //             {
+  //               "type": "button",
+  //               "style": "primary",
+  //               "height": "sm",
+  //               "action": {
+  //                 "type": "uri",
+  //                 "label": "share",
+  //                 "uri": "https://liff.line.me/1657611539-z41ew0PW"
+  //               },
+  //               "color": "#3482FA"
+  //             },
+  //             {
+  //               "type": "box",
+  //               "layout": "vertical",
+  //               "contents": [],
+  //               "margin": "sm"
+  //             }
+  //           ],
+  //           "flex": 0
+  //         }
+  //       },
+  //     },
+  //   ];
+  //   if (!liff.isInClient()) {
+  //     window.alert(errorMessage);
+  //   } else {
+  //     liff
+  //       .sendMessages(message)
+  //       .then(() => {
+  //         liff.closeWindow();
+  //       })
+  //       .catch((error) => {
+  //         window.alert("Error sending message: " + error);
+  //       });
+  //   }
+  // };
 
   onMount(async () => {
     if (!liff.isInClient()) {
