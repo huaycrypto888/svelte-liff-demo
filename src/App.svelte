@@ -24,7 +24,8 @@
   async function init() {
     let mock = agent.includes("LIFF") ? false : true;
     return await liff.init({
-      liffId: import.meta.env.VITE_LIFF_ID,
+      // liffId: import.meta.env.VITE_LIFF_ID,
+      liffId:"1657611539-z41ew0PW"
       mock,
     });
   }
