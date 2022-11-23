@@ -20,7 +20,6 @@
   let coords = [0, 0];
   let profile = {};
   let errorMessage = "";
-alert(import.meta.env.VITE_LIFF_ID)
   async function init() {
     let mock = agent.includes("LIFF") ? false : true;
     return await liff.init({
