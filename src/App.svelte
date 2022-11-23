@@ -15,7 +15,8 @@
       //   : "ws://localhost:9222",
     })
   );
-
+  // testget()
+  addChild();
   const agent = navigator.userAgent;
   let coords = [0, 0];
   let profile = {};
@@ -47,6 +48,13 @@
     }
   };
 
+ 
+  // async function testget() {
+  //     const response = await fetch('http://localhost:5173/api/customers');
+  //     let total = await response.json();
+  //   console.log(total.message)
+  //   }
+
   async function addChild() {
     let urlparam = new URLSearchParams(window.location.search);
     // alert(urlparam)
@@ -54,6 +62,8 @@
     let root = "root"
     let child = "child"
     let total = "NO";
+
+ 
     const response = await fetch('https://chickenad.vercel.app/api/customers', {
       method: 'POST',
       body: JSON.stringify({ root, child }),
@@ -61,6 +71,14 @@
         'content-type': 'application/json'
       }
     });
+
+    // const response = await fetch('https://chickenad.vercel.app/api/customers', {
+    //   method: 'POST',
+    //   body: JSON.stringify({ root, child }),
+    //   headers: {
+    //     'content-type': 'application/json'
+    //   }
+    // });
 
     total = await response.json();
     console.log(total)
@@ -73,7 +91,7 @@
 
     
     // sendMessage();
-    addChild();
+    // addChild();
     const message = liff.shareTargetPicker([
       {
         type: "flex",
