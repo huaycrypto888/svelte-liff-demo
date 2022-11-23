@@ -59,7 +59,12 @@
 
   
 async function testget() {
-    const response = await fetch('https://chickenad.vercel.app/api/customers');
+  const response = await fetch('https://chickenad.vercel.app/api/customers', {
+      method: 'GET',
+      headers: {
+        'content-type': 'application/json'
+      }
+    });
     let total = "";
     total = await response.json();
     alert("sux Get")
