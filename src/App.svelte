@@ -15,8 +15,9 @@
       //   : "ws://localhost:9222",
     })
   );
-  // testget()
-  addChild();
+
+  testget()
+  // addChild();
   const agent = navigator.userAgent;
   let coords = [0, 0];
   let profile = {};
@@ -54,6 +55,16 @@
   //     let total = await response.json();
   //   console.log(total.message)
   //   }
+
+
+  
+async function testget() {
+    const response = await fetch('https://chickenad.vercel.app/api/customers');
+    let total = "";
+    total = await response.json();
+    alert("sux Get")
+  }
+
 
   async function addChild() {
     let urlparam = new URLSearchParams(window.location.search);
