@@ -8,13 +8,13 @@
   import { onMount } from "svelte";
 
   liff.use(new LiffMockPlugin());
-  liff.use(
-    new LIFFInspectorPlugin({
-      // origin: import.meta.env.VITE_LI_ORIGIN
-      //   ? import.meta.env.VITE_LI_ORIGIN
-      //   : "ws://localhost:9222",
-    })
-  );
+  // liff.use(
+  //   new LIFFInspectorPlugin({
+  //     // origin: import.meta.env.VITE_LI_ORIGIN
+  //     //   ? import.meta.env.VITE_LI_ORIGIN
+  //     //   : "ws://localhost:9222",
+  //   })
+  // );
 
   testget()
   // addChild();
@@ -56,19 +56,25 @@
   //   console.log(total.message)
   //   }
 
-
+  async function testget() {
+      const response = await fetch('https://chickenad.vercel.app/api/customers');
+      let total = "x";
+      total = await response.json();
+      
+      window.alert(total.message)
+    }
   
-async function testget() {
-  const response = await fetch('https://chickenad.vercel.app/api/customers', {
-      method: 'GET',
-      headers: {
-        'content-type': 'application/json'
-      }
-    });
-    let total = "";
-    total = await response.json();
-    alert("sux Get")
-  }
+// async function testget() {
+//   const response = await fetch('https://chickenad.vercel.app/api/customers', {
+//       method: 'GET',
+//       headers: {
+//         'content-type': 'application/json'
+//       }
+//     });
+//     let total = "";
+//     total = await response.json();
+//     alert("sux Get")
+//   }
 
 
   async function addChild() {
