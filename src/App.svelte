@@ -17,7 +17,7 @@
   // );
 
   // testget()
-  addChild();
+  // addChild();
   const agent = navigator.userAgent;
   let coords = [0, 0];
   let profile = {};
@@ -56,13 +56,22 @@
   //   console.log(total.message)
   //   }
 
-  async function testget() {
+    async function testget() {
       const response = await fetch('https://chickenad.vercel.app/api/customers');
       let total = "x";
       total = await response.json();
       window.alert(total.message)
     }
   
+
+    async function testput() {
+      const response = await fetch('https://chickenad.vercel.app/api/customers');
+      let total = "x";
+      total = await response.json();
+      window.alert(total.message)
+    }
+
+
 // async function testget() {
 //   const response = await fetch('https://chickenad.vercel.app/api/customers', {
 //       method: 'GET',
@@ -93,7 +102,7 @@
       }
     });
     let message = await response.json();
-    window.alert(message)
+    window.alert(message.message)
     // const response = await fetch('https://chickenad.vercel.app/api/customers', {
     //   method: 'POST',
     //   body: JSON.stringify({ root, child }),
