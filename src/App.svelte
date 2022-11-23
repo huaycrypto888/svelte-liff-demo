@@ -10,9 +10,9 @@
   liff.use(new LiffMockPlugin());
   liff.use(
     new LIFFInspectorPlugin({
-      origin: import.meta.env.VITE_LI_ORIGIN
-        ? import.meta.env.VITE_LI_ORIGIN
-        : "ws://localhost:9222",
+      // origin: import.meta.env.VITE_LI_ORIGIN
+      //   ? import.meta.env.VITE_LI_ORIGIN
+      //   : "ws://localhost:9222",
     })
   );
 
@@ -25,7 +25,7 @@
     let mock = agent.includes("LIFF") ? false : true;
     return await liff.init({
       // liffId: import.meta.env.VITE_LIFF_ID,
-      liffId:"1657611539-z41ew0PW"
+      liffId: "1657611539-z41ew0PW",
       mock,
     });
   }
@@ -142,7 +142,7 @@
   });
 </script>
 
-<Geolocation getPosition bind:coords />
+<!-- <Geolocation getPosition bind:coords /> -->
 <main>
   <h1>Liff Demo</h1>
   {#await promise}
