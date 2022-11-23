@@ -63,6 +63,7 @@
     });
 
     total = await response.json();
+    console.log(total)
 
   }
 
