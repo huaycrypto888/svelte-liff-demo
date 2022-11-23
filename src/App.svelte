@@ -24,11 +24,12 @@
     let mock = agent.includes("LIFF") ? false : true;
     return await liff.init({
       liffId: import.meta.env.VITE_LIFF_ID,
-      // liffId: "1657611539-z41ew0PW",
       mock,
     });
   }
-
+  let urlparam = new URLSearchParams(window.location.search);
+  alert(urlparam)
+  alert(urlparam.get("param"));
   let promise = init().then(async () => {
     profile = await liff.getProfile();
   });
@@ -48,70 +49,247 @@
     }
   };
 
+  const shareTarket = () => {
+    // alert(window.location.search)
+    const message = liff.shareTargetPicker([
+      {
+        type: "flex",
+        altText: "this is a flex message",
+        contents:{
+          "type": "bubble",
+          "hero": {
+            "type": "image",
+            "url": "https://i.ibb.co/V2bPc0Q/logo-tanggai.jpg",
+            "size": "full",
+            "aspectRatio": "20:13",
+            "aspectMode": "cover",
+            "action": {
+              "type": "uri",
+              "uri": "https://line.me/R/ti/p/@701fnoik?param=11111"
+            }
+          },
+          "body": {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "text",
+                "text": "แทงไก่ ออโต้",
+                "weight": "bold",
+                "size": "xl"
+              },
+              {
+                "type": "box",
+                "layout": "baseline",
+                "margin": "md",
+                "contents": [
+                  {
+                    "type": "icon",
+                    "size": "sm",
+                    "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                  },
+                  {
+                    "type": "icon",
+                    "size": "sm",
+                    "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                  },
+                  {
+                    "type": "icon",
+                    "size": "sm",
+                    "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                  },
+                  {
+                    "type": "icon",
+                    "size": "sm",
+                    "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                  },
+                  {
+                    "type": "icon",
+                    "size": "sm",
+                    "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                  },
+                  {
+                    "type": "text",
+                    "text": "การันตีระดับ 5 ดาว",
+                    "size": "sm",
+                    "color": "#999999",
+                    "margin": "md",
+                    "flex": 0
+                  }
+                ]
+              },
+              
+            ]
+          },
+          "footer": {
+            "type": "box",
+            "layout": "vertical",
+            "spacing": "sm",
+            "contents": [
+              {
+                "type": "button",
+                "style": "primary",
+                "height": "sm",
+                "action": {
+                  "type": "uri",
+                  "label": "สมัคร ตอนนี้รับโบนัส X2",
+                  "uri": "https://line.me/R/ti/p/@701fnoik?param=" + profile.userId
+                }
+              },
+              {
+                "type": "button",
+                "style": "primary",
+                "height": "sm",
+                "action": {
+                  "type": "uri",
+                  "label": "แชร์ เพื่อรับรายได้ 30%",
+                  "uri": "https://liff.line.me/1657611539-z41ew0PW/?param=" + profile.userId
+                },
+                "color": "#3482FA"
+              },
+              {
+                "type": "box",
+                "layout": "vertical",
+                "contents": [],
+                "margin": "sm"
+              }
+            ],
+            "flex": 0
+          }
+        },
+      }]);
+  };
+
+
   const sendMessage = () => {
-    const today = moment().format("MM/DD");
+   
     const message = [
       {
         type: "flex",
         altText: "this is a flex message",
         contents: {
-          type: "bubble",
-          size: "giga",
-          body: {
-            type: "box",
-            layout: "vertical",
-            contents: [
+          "type": "bubble",
+          "hero": {
+            "type": "image",
+            "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png",
+            "size": "full",
+            "aspectRatio": "20:13",
+            "aspectMode": "cover",
+            "action": {
+              "type": "uri",
+              "uri": "http://linecorp.com/"
+            }
+          },
+          "body": {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
               {
-                type: "box",
-                layout: "horizontal",
-                contents: [
+                "type": "text",
+                "text": "แทงไก่ ออโต้",
+                "weight": "bold",
+                "size": "xl"
+              },
+              {
+                "type": "box",
+                "layout": "baseline",
+                "margin": "md",
+                "contents": [
                   {
-                    type: "image",
-                    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Svelte_Logo.svg/199px-Svelte_Logo.svg.png",
-                    margin: "none",
-                    offsetTop: "md",
-                    offsetBottom: "md",
-                    offsetStart: "none",
+                    "type": "icon",
+                    "size": "sm",
+                    "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
                   },
-                ],
-                margin: "none",
-              },
-              {
-                type: "text",
-                text: `Today is ${today} `,
-                align: "center",
-                margin: "xl",
-                size: "xl",
-                color: "#eb336d",
-              },
-              {
-                type: "separator",
-                margin: "xxl",
-              },
-              {
-                type: "box",
-                layout: "vertical",
-                contents: [
                   {
-                    type: "text",
-                    text: "Good luck with Svelte and LIFF",
-                    wrap: true,
-                    align: "center",
+                    "type": "icon",
+                    "size": "sm",
+                    "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
                   },
-                ],
-                borderColor: "#D3D3D3",
-                borderWidth: "normal",
-                cornerRadius: "sm",
-                paddingAll: "lg",
-                margin: "xxl",
+                  {
+                    "type": "icon",
+                    "size": "sm",
+                    "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                  },
+                  {
+                    "type": "icon",
+                    "size": "sm",
+                    "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                  },
+                  {
+                    "type": "icon",
+                    "size": "sm",
+                    "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                  },
+                  {
+                    "type": "text",
+                    "text": "การันตีระดับ 5 ดาว",
+                    "size": "sm",
+                    "color": "#999999",
+                    "margin": "md",
+                    "flex": 0
+                  }
+                ]
               },
+              {
+                "type": "box",
+                "layout": "vertical",
+                "margin": "lg",
+                "spacing": "sm",
+                "contents": [
+                  {
+                    "type": "box",
+                    "layout": "baseline",
+                    "spacing": "sm",
+                    "contents": [
+                      {
+                        "type": "text",
+                        "text": "ร่วมเป็นส่วนหนึ่งกับเรา รับผลประโยชน์ 30%",
+                        "wrap": true,
+                        "color": "#666666",
+                        "size": "sm",
+                        "flex": 5
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "footer": {
+            "type": "box",
+            "layout": "vertical",
+            "spacing": "sm",
+            "contents": [
+              {
+                "type": "button",
+                "style": "primary",
+                "height": "sm",
+                "action": {
+                  "type": "uri",
+                  "label": "สมัคร",
+                  "uri": "https://linecorp.com"
+                }
+              },
+              {
+                "type": "button",
+                "style": "primary",
+                "height": "sm",
+                "action": {
+                  "type": "uri",
+                  "label": "share",
+                  "uri": "https://liff.line.me/1657611539-z41ew0PW"
+                },
+                "color": "#3482FA"
+              },
+              {
+                "type": "box",
+                "layout": "vertical",
+                "contents": [],
+                "margin": "sm"
+              }
             ],
-          },
-          styles: {
-            footer: {
-              separator: true,
-            },
-          },
+            "flex": 0
+          }
         },
       },
     ];
@@ -149,8 +327,9 @@
   {:then}
     <p>LIFF init succeeded.</p>
     <div class="button">
+      <button on:click={shareTarket}>share</button>
       <button on:click={sendMessage}>Send Message</button>
-      <button on:click={closeWindow}>Close</button>
+      
     </div>
 
     <hr />
@@ -160,10 +339,7 @@
         <strong>User Name</strong>
         :<span>{profile.displayName}</span>
       </li>
-      <li>
-        <strong>GPS</strong>
-        :<span>{JSON.stringify(coords)}</span>
-      </li>
+
       <li>
         <strong>User Agent</strong>
         :<span>{agent}</span>
