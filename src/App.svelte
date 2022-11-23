@@ -27,9 +27,7 @@
       mock,
     });
   }
-  let urlparam = new URLSearchParams(window.location.search);
-  alert(urlparam)
-  alert(urlparam.get("param"));
+
   let promise = init().then(async () => {
     profile = await liff.getProfile();
   });
@@ -49,12 +47,32 @@
     }
   };
 
+  async function addChild() {
+    let urlparam = new URLSearchParams(window.location.search);
+    // alert(urlparam)
+    // alert(urlparam.get("param"));
+    let root = "root"
+    let child = "child"
+    let total = "NO";
+    const response = await fetch('https://chickenad.vercel.app/api/customers', {
+      method: 'POST',
+      body: JSON.stringify({ root, child }),
+      headers: {
+        'content-type': 'application/json'
+      }
+    });
+
+    total = await response.json();
+
+  }
+
+
   const shareTarket = () => {
     // alert(window.location.search)
 
     
-    sendMessage();
-   
+    // sendMessage();
+    addChild();
     const message = liff.shareTargetPicker([
       {
         type: "flex",
@@ -168,7 +186,7 @@
 
 
 
-          async function sendMessage() {
+async function sendMessage() {
    
    const message = [
     {
