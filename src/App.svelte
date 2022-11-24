@@ -118,6 +118,9 @@
       window.alert('not friend');
       window.location = "https://line.me/R/ti/p/@701fnoik";
     }
+    else{
+      addChild();
+    }
 
     const message = liff.shareTargetPicker([
       {
