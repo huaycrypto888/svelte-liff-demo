@@ -50,69 +50,29 @@
   };
 
  
-  // async function testget() {
-  //     const response = await fetch('http://localhost:5173/api/customers');
-  //     let total = await response.json();
-  //   console.log(total.message)
-  //   }
-
-
     async function checkfriend() {
       const friend = await liff.getFriendship();
       return friend.friendFlag;
     }
 
-    const isFriend =  checkfriend();
+    
 
     
-    async function testget() {
-      const response = await fetch('https://chickenad.vercel.app/api/customers');
-      let total = "x";
-      total = await response.json();
-      window.alert(total.message)
-    }
-  
-
-    async function testput() {
-      const response = await fetch('https://chickenad.vercel.app/api/customers/+server.js');
-      let total = "x";
-      total = await response.json();
-      window.alert(total.message)
-    }
-
-    async function testpost() {
-      let root = "root"
-      let child = "child"
-      const response = await fetch('https://chickenad.vercel.app/api/customers', {
-        method: 'POST',
-        body: JSON.stringify({ root, child })
-      });
-      let total = "x";
-      total = await response.json();
-      window.alert(total.message)
-    }
-
 
   async function addChild() {
     let urlparam = new URLSearchParams(window.location.search);
     let root = urlparam.get("root")
     let child = profile.userId
-    window.alert(root)
-    window.alert(child)
-
-
- 
     const response = await fetch('https://chickenad.vercel.app/api/customers', {
       method: 'POST',
       body: JSON.stringify({ root, child })
     });
-    let message = await response.json();
- 
 
   }
 
 
   const shareTarket = () => {
+    const isFriend =  checkfriend();
     if(!isFriend)
     {
       window.alert('not friend');
@@ -244,154 +204,6 @@ async function sendMessage() {
   }
 };
 
-
-
-  // async function sendMessage() {
-   
-  //    const message = [
-  //     {
-  //       type: "flex",
-  //       altText: "this is a flex message",
-  //       contents: {
-  //         "type": "bubble",
-  //         "hero": {
-  //           "type": "image",
-  //           "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png",
-  //           "size": "full",
-  //           "aspectRatio": "20:13",
-  //           "aspectMode": "cover",
-  //           "action": {
-  //             "type": "uri",
-  //             "uri": "http://linecorp.com/"
-  //           }
-  //         },
-  //         "body": {
-  //           "type": "box",
-  //           "layout": "vertical",
-  //           "contents": [
-  //             {
-  //               "type": "text",
-  //               "text": "แทงไก่ ออโต้",
-  //               "weight": "bold",
-  //               "size": "xl"
-  //             },
-  //             {
-  //               "type": "box",
-  //               "layout": "baseline",
-  //               "margin": "md",
-  //               "contents": [
-  //                 {
-  //                   "type": "icon",
-  //                   "size": "sm",
-  //                   "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-  //                 },
-  //                 {
-  //                   "type": "icon",
-  //                   "size": "sm",
-  //                   "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-  //                 },
-  //                 {
-  //                   "type": "icon",
-  //                   "size": "sm",
-  //                   "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-  //                 },
-  //                 {
-  //                   "type": "icon",
-  //                   "size": "sm",
-  //                   "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-  //                 },
-  //                 {
-  //                   "type": "icon",
-  //                   "size": "sm",
-  //                   "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-  //                 },
-  //                 {
-  //                   "type": "text",
-  //                   "text": "การันตีระดับ 5 ดาว",
-  //                   "size": "sm",
-  //                   "color": "#999999",
-  //                   "margin": "md",
-  //                   "flex": 0
-  //                 }
-  //               ]
-  //             },
-  //             {
-  //               "type": "box",
-  //               "layout": "vertical",
-  //               "margin": "lg",
-  //               "spacing": "sm",
-  //               "contents": [
-  //                 {
-  //                   "type": "box",
-  //                   "layout": "baseline",
-  //                   "spacing": "sm",
-  //                   "contents": [
-  //                     {
-  //                       "type": "text",
-  //                       "text": "ร่วมเป็นส่วนหนึ่งกับเรา รับผลประโยชน์ 30%",
-  //                       "wrap": true,
-  //                       "color": "#666666",
-  //                       "size": "sm",
-  //                       "flex": 5
-  //                     }
-  //                   ]
-  //                 }
-  //               ]
-  //             }
-  //           ]
-  //         },
-  //         "footer": {
-  //           "type": "box",
-  //           "layout": "vertical",
-  //           "spacing": "sm",
-  //           "contents": [
-  //             {
-  //               "type": "button",
-  //               "style": "primary",
-  //               "height": "sm",
-  //               "action": {
-  //                 "type": "uri",
-  //                 "label": "สมัคร",
-  //                 "uri": "https://linecorp.com"
-  //               }
-  //             },
-  //             {
-  //               "type": "button",
-  //               "style": "primary",
-  //               "height": "sm",
-  //               "action": {
-  //                 "type": "uri",
-  //                 "label": "share",
-  //                 "uri": "https://liff.line.me/1657611539-z41ew0PW"
-  //               },
-  //               "color": "#3482FA"
-  //             },
-  //             {
-  //               "type": "box",
-  //               "layout": "vertical",
-  //               "contents": [],
-  //               "margin": "sm"
-  //             }
-  //           ],
-  //           "flex": 0
-  //         }
-  //       },
-  //     },
-  //   ];
-  //   if (!liff.isInClient()) {
-  //     window.alert(errorMessage);
-  //   } else {
-  //     liff
-  //       .sendMessages(message)
-  //       .then(() => {
-  //         liff.closeWindow();
-  //       })
-  //       .catch((error) => {
-  //         window.alert("Error sending message: " + error);
-  //       });
-  //   }
-  // };
-
   onMount(async () => {
     if (!liff.isInClient()) {
       errorMessage =
@@ -510,3 +322,4 @@ async function sendMessage() {
 
 }
 </style>
+
