@@ -16,10 +16,7 @@
   //   })
   // );
 
-  // testget()
-  // addChild();
-  // testput();
-  testpost();
+
   const agent = navigator.userAgent;
   let coords = [0, 0];
   let profile = {};
@@ -32,6 +29,7 @@
     });
   }
 
+  
   let promise = init().then(async () => {
     profile = await liff.getProfile();
   });
@@ -58,6 +56,15 @@
   //   console.log(total.message)
   //   }
 
+
+    async function checkfriend() {
+      const friend = await liff.getFriendship();
+      return friend.friendFlag;
+    }
+
+    const isFriend =  checkfriend();
+
+    
     async function testget() {
       const response = await fetch('https://chickenad.vercel.app/api/customers');
       let total = "x";
@@ -100,39 +107,29 @@
 
   async function addChild() {
     let urlparam = new URLSearchParams(window.location.search);
-    // alert(urlparam)
-    // alert(urlparam.get("param"));
-    let root = "root"
+    let root = urlparam.get("param")
     let child = "child"
-    let total = "NO";
+    // alert(urlparam)
+  // alert(urlparam.get("param"));
 
  
     const response = await fetch('https://chickenad.vercel.app/api/customers', {
       method: 'POST',
-      body: JSON.stringify({ root, child }),
-      headers: {
-        'content-type': 'application/json'
-      }
+      body: JSON.stringify({ root, child })
     });
     let message = await response.json();
     window.alert(message.message)
-    // const response = await fetch('https://chickenad.vercel.app/api/customers', {
-    //   method: 'POST',
-    //   body: JSON.stringify({ root, child }),
-    //   headers: {
-    //     'content-type': 'application/json'
-    //   }
-    // });
 
   }
 
 
   const shareTarket = () => {
-    // alert(window.location.search)
+    if(!isFriend)
+    {
+      window.alert('not friend');
+      window.location = "https://line.me/R/ti/p/@701fnoik";
+    }
 
-    
-    // sendMessage();
-    // addChild();
     const message = liff.shareTargetPicker([
       {
         type: "flex",
@@ -240,31 +237,19 @@
           }
         },
       }]);
+      closeWindow();
   };
 
 
 
-
-
 async function sendMessage() {
-   
-   const message = [
-    {
-      type: "text",
-      text: "Goodjob Man",
-    }
-  ];
-  if (!liff.isInClient()) {
-    window.alert(errorMessage);
-  } else {
-    liff
-      .sendMessages(message)
-      .then(() => {
-        liff.closeWindow();
-      })
-      .catch((error) => {
-        window.alert("Error sending message: " + error);
-      });
+  if(!isFriend)
+  {
+    window.alert('not friend');
+    window.location = "https://line.me/R/ti/p/@701fnoik";
+  }
+  else{
+    window.alert("รายได้ของคุณ = ??")
   }
 };
 
@@ -435,27 +420,19 @@ async function sendMessage() {
     <p>LIFF init...</p>
   {:then}
   <a href="https://line.me/R/ti/p/@701fnoik"><img src="https://i.ibb.co/FgxhQFB/logo-tanggai-00001.jpg" alt="แทงไก่" border="0" /></a>
-  <button class="button-91" on:click={(shareTarket)}>   แชร์   </button>
-  <button on:click={sendMessage}>Send Message</button>
-    <div class="button">
-      <button on:click={shareTarket}>share</button>
-      <!-- <button on:click={sendMessage}>Send Message</button> -->
-      
-    </div>
+ <br>
+  <button class="button-91" on:click={(shareTarket)}>แชร์เพื่อรับรายได้</button>
+  <button class="button-91" on:click={sendMessage}>ตรวจสอบรายได้ </button>
 
-    <!-- <hr />
+
+    <hr />
     <h3>User Info</h3>
     <ul>
       <li>
         <strong>User Name</strong>
         :<span>{profile.displayName}</span>
       </li>
-
-      <li>
-        <strong>User Agent</strong>
-        :<span>{agent}</span>
-      </li>
-    </ul> -->
+    </ul>
     <h4 class="error">{errorMessage}</h4>
     <!-- <hr /> -->
     <!-- <h3>LIFF Info</h3>
@@ -538,5 +515,36 @@ async function sendMessage() {
   touch-action: manipulation;
 
   cursor: pointer;
+  width: 170px;
 }
+
+
+/* .button-88 {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 0.7em 1.4em 0.7em 1.1em;
+  color: white;
+  background: #ad5389;
+  background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%);
+  border: none;
+  box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+  letter-spacing: 0.05em;
+  border-radius: 20em;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 200px;
+}
+
+.button-88:hover {
+  box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+}
+
+.button-88:active {
+  box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+} */
 </style>
