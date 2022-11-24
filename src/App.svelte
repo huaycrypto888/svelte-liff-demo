@@ -92,25 +92,14 @@
       window.alert(total.message)
     }
 
-// async function testget() {
-//   const response = await fetch('https://chickenad.vercel.app/api/customers', {
-//       method: 'GET',
-//       headers: {
-//         'content-type': 'application/json'
-//       }
-//     });
-//     let total = "";
-//     total = await response.json();
-//     alert("sux Get")
-//   }
-
 
   async function addChild() {
     let urlparam = new URLSearchParams(window.location.search);
-    let root = urlparam.get("param")
-    let child = "child"
-    // alert(urlparam)
-  // alert(urlparam.get("param"));
+    let root = urlparam.get("root")
+    let child = profile.userId
+    window.alert(root)
+    window.alert(child)
+
 
  
     const response = await fetch('https://chickenad.vercel.app/api/customers', {
@@ -205,16 +194,16 @@
             "layout": "vertical",
             "spacing": "sm",
             "contents": [
-              {
-                "type": "button",
-                "style": "primary",
-                "height": "sm",
-                "action": {
-                  "type": "uri",
-                  "label": "สมัคร ตอนนี้รับโบนัส X2",
-                  "uri": "https://line.me/R/ti/p/@701fnoik?param=" + profile.userId
-                }
-              },
+              // {
+              //   "type": "button",
+              //   "style": "primary",
+              //   "height": "sm",
+              //   "action": {
+              //     "type": "uri",
+              //     "label": "สมัคร ตอนนี้รับโบนัส X2",
+              //     "uri": "https://line.me/R/ti/p/@701fnoik?root=" + profile.userId
+              //   }
+              // },
               {
                 "type": "button",
                 "style": "primary",
@@ -222,7 +211,7 @@
                 "action": {
                   "type": "uri",
                   "label": "แชร์ เพื่อรับรายได้ 30%",
-                  "uri": "https://liff.line.me/1657611539-z41ew0PW/?param=" + profile.userId
+                  "uri": "https://liff.line.me/1657611539-z41ew0PW/?root=" + profile.userId
                 },
                 "color": "#3482FA"
               },
