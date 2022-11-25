@@ -79,7 +79,7 @@
     //   method: 'POST'
     // });
     let total = await response.json();
-    window.alert(total.message)
+    window.alert(total)
   }
 
 
