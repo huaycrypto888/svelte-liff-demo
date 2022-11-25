@@ -55,19 +55,31 @@
       return friend.friendFlag;
     }
 
-    
+
 
     
 
   async function addChild() {
     let urlparam = new URLSearchParams(window.location.search);
-    let root = urlparam.get("root")
-    let child = profile.userId
-    const response = await fetch('https://chickenad.vercel.app/api/customers', {
+    let root = 1
+    let child = 2
+    // window.alert(root)
+    // window.alert(profile.userId)
+    // let root = "123"
+    // let child = "456"
+    // const response = await fetch('https://chickenad.vercel.app/api/customers', {
+    const response = await fetch('http://localhost:5173/api/customers', {
       method: 'POST',
-      body: JSON.stringify({ root, child })
+      body: JSON.stringify({ root, child }),
+      headers: {
+        'content-type': 'application/json'
+      }
     });
-
+    // const response = await fetch('http://localhost:5173/api/customers?root=1&child=2', {
+    //   method: 'POST'
+    // });
+    let total = await response.json();
+    window.alert(total.message)
   }
 
 
@@ -323,3 +335,41 @@ async function sendMessage() {
 }
 </style>
 
+
+
+<!-- 
+async function testget() {
+  const response = await fetch('https://chickenad.vercel.app/api/customers');
+  let total = "x";
+  total = await response.json();
+  window.alert(total.message)
+}
+
+
+async function testput() {
+  const response = await fetch('https://chickenad.vercel.app/api/customers/+server.js');
+  let total = "x";
+  total = await response.json();
+  window.alert(total.message)
+}
+
+
+  async function testpost() {
+
+    const response = await fetch('http://localhost:5173/api/customers?root=1&child=2', {
+      method: 'POST'
+    });
+  
+  }
+
+async function testpost() {
+  let root = "root"
+  let child = "child"
+  const response = await fetch('https://chickenad.vercel.app/api/customers', {
+    method: 'POST',
+    body: JSON.stringify({ root, child })
+  });
+  let total = "x"Ź
+  total = await response.json();
+  window.alert(total.message)
+} -->
