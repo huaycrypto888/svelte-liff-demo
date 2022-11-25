@@ -75,8 +75,8 @@
     // const response = await fetch('http://localhost:5173/api/customers?root=1&child=2', {
     //   method: 'POST'
     // });
-    let total = await response.json();
-    window.alert(total)
+    // let total = await response.json();
+ 
   }
 
 
