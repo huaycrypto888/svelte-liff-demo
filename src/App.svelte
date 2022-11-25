@@ -70,10 +70,7 @@
     const response = await fetch('https://chickenad.vercel.app/api/customers', {
     // const response = await fetch('http://localhost:5173/api/customers', {
       method: 'POST',
-      body: JSON.stringify({ root, child }),
-      headers: {
-        'content-type': 'application/json'
-      }
+      body: JSON.stringify({ root, child })
     });
     // const response = await fetch('http://localhost:5173/api/customers?root=1&child=2', {
     //   method: 'POST'
