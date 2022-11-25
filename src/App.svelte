@@ -67,8 +67,8 @@
     // window.alert(profile.userId)
     // let root = "123"
     // let child = "456"
-    const response = await fetch('https://chickenad.vercel.app/api/customers', {
-    // const response = await fetch('http://localhost:5173/api/customers', {
+    // const response = await fetch('https://chickenad.vercel.app/api/customers', {
+    const response = await fetch('http://localhost:5173/api/customers', {
       method: 'POST',
       body: JSON.stringify({ root, child }),
       headers: {
@@ -93,7 +93,6 @@
     else{
       addChild();
     }
-
     const message = liff.shareTargetPicker([
       {
         type: "flex",
