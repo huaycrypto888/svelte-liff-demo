@@ -61,22 +61,13 @@
 
   async function addChild() {
     let urlparam = new URLSearchParams(window.location.search);
-    let root = 1
-    let child = 2
-    // window.alert(root)
-    // window.alert(profile.userId)
-    // let root = "123"
-    // let child = "456"
+    let root = urlparam.get("root")
+    let child = profile.userId
     const response = await fetch('https://chickenad.vercel.app/api/customers', {
-    // const response = await fetch('http://localhost:5173/api/customers', {
+
       method: 'POST',
       body: JSON.stringify({ root, child })
     });
-    // const response = await fetch('http://localhost:5173/api/customers?root=1&child=2', {
-    //   method: 'POST'
-    // });
-    // let total = await response.json();
- 
   }
 
 
@@ -368,4 +359,22 @@ async function testpost() {
   let total = "x"Ź
   total = await response.json();
   window.alert(total.message)
+} -->
+
+<!-- async function addChild() {
+  let urlparam = new URLSearchParams(window.location.search);
+
+  window.alert(urlparam.get("root"))
+  window.alert(profile.userId)
+
+  const response = await fetch('https://chickenad.vercel.app/api/customers', {
+
+    method: 'POST',
+    body: JSON.stringify({ root, child })
+  });
+  // const response = await fetch('http://localhost:5173/api/customers?root=1&child=2', {
+  //   method: 'POST'
+  // });
+  // let total = await response.json();
+
 } -->
