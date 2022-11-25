@@ -63,10 +63,11 @@
     let urlparam = new URLSearchParams(window.location.search);
     let root = urlparam.get("root")
     let child = profile.userId
+    let typeMarket = urlparam.get("typeMarket")
     const response = await fetch('https://chickenad.vercel.app/api/customers', {
 
       method: 'POST',
-      body: JSON.stringify({ root, child })
+      body: JSON.stringify({ root, child, typeMarket })
     });
   }
 
@@ -172,8 +173,41 @@
                 "height": "sm",
                 "action": {
                   "type": "uri",
-                  "label": "แชร์ เพื่อรับรายได้ 30%",
-                  "uri": "https://liff.line.me/1657611539-z41ew0PW/?root=" + profile.userId
+                  "label": "แชร์ เพื่อรับรายได้ 30% จากยอดเสีย",
+                  "uri": "https://liff.line.me/1657611539-z41ew0PW/?root=" + profile.userId +  "&typeMarket=1"
+                },
+                "color": "#3482FA"
+              },
+              {
+                "type": "button",
+                "style": "primary",
+                "height": "sm",
+                "action": {
+                  "type": "uri",
+                  "label": "แชร์ เพื่อรับรายได้ 5% จากยอดเล่น",
+                  "uri": "https://liff.line.me/1657611539-z41ew0PW/?root=" + profile.userId +  "&typeMarket=2"
+                },
+                "color": "#3482FA"
+              },
+              {
+                "type": "button",
+                "style": "primary",
+                "height": "sm",
+                "action": {
+                  "type": "uri",
+                  "label": "แชร์ เพื่อรับรายได้ 100 บาท/คน ",
+                  "uri": "https://liff.line.me/1657611539-z41ew0PW/?root=" + profile.userId +  "&typeMarket=3"
+                },
+                "color": "#3482FA"
+              },
+              {
+                "type": "button",
+                "style": "primary",
+                "height": "sm",
+                "action": {
+                  "type": "uri",
+                  "label": "แชร์ เพื่อรับรายได้ 2% จากยอดฝาก",
+                  "uri": "https://liff.line.me/1657611539-z41ew0PW/?root=" + profile.userId +  "&typeMarket=4"
                 },
                 "color": "#3482FA"
               },
