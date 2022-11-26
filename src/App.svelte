@@ -438,7 +438,7 @@ async function shareTarket(typeMarket) {
     <input class="button-70"  type="submit" value="google">
 </form> -->
 
-    <hr />
+    <!-- <hr /> -->
     <!-- <h3>ได้โปรด อ่านด้านล่าง หนูขอร้อง อิคึ..อิคึ..</h3>
     <div class="center" >สวัสดีค่ะคุณ <strong>{profile.displayName}</strong> <br> </div>
     <div>ทางเรามีบริการต่างๆ สิทธิพิเศษ แบบ Exclusive VIP ขอบอกว่างานนี้ฟรีไม่มีค่าใช้จ่ายนะค่ะ</div> -->
@@ -479,7 +479,7 @@ async function shareTarket(typeMarket) {
         :<span>{liff.getLineVersion()}</span>
       </li>
     </ul> -->
-    <hr />
+    <!-- <hr /> -->
     <!-- <h3>เพิ่มเพื่อนผ่าน QR Code</h3>
     <img src="./liff-qr.png" alt="" /> -->
   {:catch e}
