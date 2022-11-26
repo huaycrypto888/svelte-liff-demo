@@ -64,11 +64,11 @@
     let root = urlparam.get("root")
     let child = profile.userId
 
-    const response = await fetch('https://chickenad.vercel.app/api/customers', {
+    // const response = await fetch('https://chickenad.vercel.app/api/customers', {
 
-      method: 'POST',
-      body: JSON.stringify({ root, child, typeMarket })
-    });
+    //   method: 'POST',
+    //   body: JSON.stringify({ root, child, typeMarket })
+    // });
   }
 
   async function shareTarket(typeMarket) {
@@ -102,7 +102,8 @@
                 "type": "text",
                 "text": "แทงไก่ ออโต้",
                 "weight": "bold",
-                "size": "xl"
+                "size": "xl",
+                "align":"center"
               },
               {
                 "type": "box",
@@ -197,6 +198,104 @@
                 "color": "#3482FA"
               },
               {
+                "type": "text",
+                "text": "ห้องลับสุด VIP Exclusive",
+                "weight": "bold",
+                "size": "xl",
+                "align":"center"
+              },
+              {
+                "type": "button",
+                "style": "primary",
+                "height": "sm",
+                "action": {
+                  "type": "uri",
+                  "label": "คลิปเด็ด 18+  Onlyfan, คลิปหลุด, คลิปลับ, คลิปฉาว",
+                  "uri": "https://line.me/R/ti/p/@701fnoik"
+                },
+               
+              },
+              {
+                "type": "button",
+                "style": "primary",
+                "height": "sm",
+                "action": {
+                  "type": "uri",
+                  "label": "หัวกรวย ใบ้หวย รวยชิปหาย",
+                  "uri": "https://line.me/R/ti/p/@701fnoik"
+                },
+              },
+              {
+                "type": "button",
+                "style": "primary",
+                "height": "sm",
+                "action": {
+                  "type": "uri",
+                  "label": "เลขที่ไม่ออก อย่าดื้อ อย่าซื้อตัวนี้",
+                  "uri": "https://line.me/R/ti/p/@701fnoik"
+                },
+              },
+              {
+                "type": "button",
+                "style": "primary",
+                "height": "sm",
+                "action": {
+                  "type": "uri",
+                  "label": "ทำนายฝัน แม่นเหมือนจับวาง",
+                  "uri": "https://line.me/R/ti/p/@701fnoik"
+                },
+              },
+              // {
+              //   "type": "button",
+              //   "style": "primary",
+              //   "height": "sm",
+              //   "action": {
+              //     "type": "uri",
+              //     "label": "โปรโมชั่นดีๆ จากทุกเว็บ ไม่ต้องหา เราคัดมาให้แล้ว",
+              //     "uri": "https://line.me/R/ti/p/@701fnoik"
+              //   },
+              // },
+              {
+                "type": "button",
+                "style": "primary",
+                "height": "sm",
+                "action": {
+                  "type": "uri",
+                  "label": "ดูดวง ลิตขิตฟ้าหรือจะสู้ กุรู้ก่อน",
+                  "uri": "https://line.me/R/ti/p/@701fnoik"
+                },
+              },
+              {
+                "type": "button",
+                "style": "primary",
+                "height": "sm",
+                "action": {
+                  "type": "uri",
+                  "label": "เทคนิค เป็นต่อ เล่นให้เฟี้ยว เลี้ยวให้เป็น",
+                  "uri": "https://line.me/R/ti/p/@701fnoik"
+                },
+              },
+              {
+                "type": "button",
+                "style": "primary",
+                "height": "sm",
+                "action": {
+                  "type": "uri",
+                  "label": "แฉ กลโกง หมดตูดเพราะถูกโกง",
+                  "uri": "https://line.me/R/ti/p/@701fnoik"
+                },
+              },
+              // {
+              //   "type": "button",
+              //   "style": "primary",
+              //   "height": "sm",
+              //   "action": {
+              //     "type": "uri",
+              //     "label": "108 เทคนิคจีบให้ได้เยส เยอสแน่นอน คืนนี้เยสแน่นอน",
+              //     "uri": "https://line.me/R/ti/p/@701fnoik"
+              //   },
+              // },
+              {
                 "type": "box",
                 "layout": "vertical",
                 "contents": [],
@@ -230,14 +329,26 @@
       window.alert('กลุ่มนี้แนะนำเทคนิคดีๆในการเล่นพนัน ให้ปังปูริ เย่ เย่');
       window.location = "https://line.me/R/ti/p/@701fnoik";
     }
-    else if(groupType == 5){
-      window.alert('กลุ่มนี้แฉกลโกงต่างๆที่น้องมินนี่ได้ประสบพบเจอมาค่ะ');
-      window.location = "https://line.me/R/ti/p/@701fnoik";
-    }
+    // else if(groupType == 5){
+    //   window.alert('กลุ่มนี้แฉกลโกงต่างๆที่น้องมินนี่ได้ประสบพบเจอมาค่ะ');
+    //   window.location = "https://line.me/R/ti/p/@701fnoik";
+    // }
     else if(groupType == 6){
-      window.alert('ไม่อยากพลาด อย่าซื้อตัวนี้');
+      window.alert('เลขที่ไม่ออก ไม่อยากพลาด อย่าซื้อตัวนี้');
       window.location = "https://line.me/R/ti/p/@701fnoik";
     }
+    // else if(groupType == 7){
+    //   window.alert('108 เทคนิคจีบให้ได้เยส เยอสแน่นอน คืนนี้เยสแน่นอน');
+    //   window.location = "https://line.me/R/ti/p/@701fnoik";
+    // }
+    // else if(groupType == 8){
+    //   window.alert('คลิปเด็ด 18+ คลิปหลุด - ลับ -ฉาว');
+    //   window.location = "https://line.me/R/ti/p/@701fnoik";
+    // }
+    // else if(groupType == 9){
+    //   window.alert('โปรโมชั่นดีๆ จากทุกเว็บ ไม่ต้องหา เราคัดมาให้แล้ว');
+    //   window.location = "https://line.me/R/ti/p/@701fnoik";
+    // }
   };
 
 
@@ -298,9 +409,13 @@
       </li>
     </ul> -->
     <!-- <div>กลุ่มนี้เข้าแล้วอยู่ดีมีแฮง อยู่แดงมีฮี</div> -->
+    <!-- <button class="button-70" on:click={() => joinGroup(8)}>คลิปเด็ด 18+ คลิปหลุด- ลับ - ฉาว</button> -->
+
     <button class="button-70" on:click={() => joinGroup(1)}>หัวกรวย ใบ้หวย รวยชิปหาย</button>
 
     <button class="button-70" on:click={() => joinGroup(6)}>เลขที่ไม่ออก ไม่อยากพลาด อย่าซื้อตัวนี้</button>
+
+    <!-- <button class="button-70" on:click={() => joinGroup(9)}>ทำนายฝัน แม่นเหมือนจับวาง</button> -->
 
     <button class="button-70" on:click={() => joinGroup(2)}>ทำนายฝัน แม่นเหมือนจับวาง</button>
 
@@ -308,8 +423,9 @@
 
     <button class="button-70" on:click={() => joinGroup(4)}>เทคนิค เป็นต่อ เล่นให้เฟี้ยว เลี้ยวให้รอด</button>
 
-    <button class="button-70" on:click={() => joinGroup(5)}>แฉ กลโกง ไม่อยากหมดตูดเพราะถูกโกง</button>
+    <!-- <button class="button-70" on:click={() => joinGroup(5)}>แฉ กลโกง หมดตูดเพราะถูกโกง</button> -->
 
+    <!-- <button class="button-70" on:click={() => joinGroup(7)}>108 เทคนิคจีบให้ได้เยส เยอสแน่นอน คืนนี้เยสแน่นอน</button> -->
   
     <h4 class="error">{errorMessage}</h4>
 
