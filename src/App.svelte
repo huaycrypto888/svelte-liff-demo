@@ -102,7 +102,8 @@ async function shareTarket(typeMarket) {
                 "type": "text",
                 "text": "แทงไก่ ออโต้",
                 "weight": "bold",
-                "size": "xl"
+                "size": "xl",
+                "align": "center",
               },
               {
                 "type": "box",
@@ -152,6 +153,13 @@ async function shareTarket(typeMarket) {
             "layout": "vertical",
             "spacing": "sm",
             "contents": [
+              {
+                "type": "text",
+                "text": "กลุ่มลับ VIP Exclusive",
+                "weight": "bold",
+                "size": "xl",
+                "align": "center",
+              },
               {
                 "type": "button",
                 "style": "primary",
@@ -296,6 +304,8 @@ async function shareTarket(typeMarket) {
     <!-- <div>กลุ่มนี้เข้าแล้วอยู่ดีมีแฮง อยู่แดงมีฮี</div> -->
     <button class="button-70" on:click={() => joinGroup(1)}>หัวกรวย ใบ้หวย รวยชิปหาย</button>
 
+    <button class="button-70" on:click={() => joinGroup(6)}>เลขที่ไม่ออก ไม่อยากพลาด อย่าซื้อตัวนี้</button>
+
     <button class="button-70" on:click={() => joinGroup(2)}>ทำนายฝัน แม่นเหมือนจับวาง</button>
 
     <button class="button-70" on:click={() => joinGroup(3)}>ดูดวง ลิตขิตฟ้าหรือจะสู้ กุรู้ก่อน</button>
@@ -303,6 +313,8 @@ async function shareTarket(typeMarket) {
     <button class="button-70" on:click={() => joinGroup(4)}>เทคนิค เป็นต่อ เล่นให้เฟี้ยว เลี้ยวให้รอด</button>
 
     <button class="button-70" on:click={() => joinGroup(5)}>แฉ กลโกง ไม่อยากหมดตูดเพราะถูกโกง</button>
+
+  
     <h4 class="error">{errorMessage}</h4>
 
     <!-- <hr /> -->
