@@ -59,11 +59,11 @@
 
     
 
-  async function addChild() {
+  async function addChild(typeMarket) {
     let urlparam = new URLSearchParams(window.location.search);
     let root = urlparam.get("root")
     let child = profile.userId
-    let typeMarket = urlparam.get("typeMarket")
+
     const response = await fetch('https://chickenad.vercel.app/api/customers', {
 
       method: 'POST',
@@ -72,7 +72,159 @@
   }
 
 
-  const shareTarket = () => {
+  // const shareTarket = () => {
+  //   const isFriend =  checkfriend();
+  //   if(!isFriend)
+  //   {
+  //     window.alert('not friend');
+  //     window.location = "https://line.me/R/ti/p/@701fnoik";
+  //   }
+  //   else{
+  //     addChild();
+  //   }
+  //   const message = liff.shareTargetPicker([
+  //     {
+  //       type: "flex",
+  //       altText: "this is a flex message",
+  //       contents:{
+  //         "type": "bubble",
+  //         "hero": {
+  //           "type": "image",
+  //           "url": "https://i.ibb.co/V2bPc0Q/logo-tanggai.jpg",
+  //           "size": "full",
+  //           "aspectRatio": "20:13",
+  //           "aspectMode": "cover",
+  //           "action": {
+  //             "type": "uri",
+  //             "uri": "https://line.me/R/ti/p/@701fnoik?param=11111"
+  //           }
+  //         },
+  //         "body": {
+  //           "type": "box",
+  //           "layout": "vertical",
+  //           "contents": [
+  //             {
+  //               "type": "text",
+  //               "text": "แทงไก่ ออโต้",
+  //               "weight": "bold",
+  //               "size": "xl"
+  //             },
+  //             {
+  //               "type": "box",
+  //               "layout": "baseline",
+  //               "margin": "md",
+  //               "contents": [
+  //                 {
+  //                   "type": "icon",
+  //                   "size": "sm",
+  //                   "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+  //                 },
+  //                 {
+  //                   "type": "icon",
+  //                   "size": "sm",
+  //                   "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+  //                 },
+  //                 {
+  //                   "type": "icon",
+  //                   "size": "sm",
+  //                   "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+  //                 },
+  //                 {
+  //                   "type": "icon",
+  //                   "size": "sm",
+  //                   "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+  //                 },
+  //                 {
+  //                   "type": "icon",
+  //                   "size": "sm",
+  //                   "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+  //                 },
+  //                 {
+  //                   "type": "text",
+  //                   "text": "การันตีระดับ 5 ดาว",
+  //                   "size": "sm",
+  //                   "color": "#999999",
+  //                   "margin": "md",
+  //                   "flex": 0
+  //                 }
+  //               ]
+  //             },
+              
+  //           ]
+  //         },
+  //         "footer": {
+  //           "type": "box",
+  //           "layout": "vertical",
+  //           "spacing": "sm",
+  //           "contents": [
+  //             // {
+  //             //   "type": "button",
+  //             //   "style": "primary",
+  //             //   "height": "sm",
+  //             //   "action": {
+  //             //     "type": "uri",
+  //             //     "label": "สมัคร ตอนนี้รับโบนัส X2",
+  //             //     "uri": "https://line.me/R/ti/p/@701fnoik?root=" + profile.userId
+  //             //   }
+  //             // },
+  //             {
+  //               "type": "button",
+  //               "style": "primary",
+  //               "height": "sm",
+  //               "action": {
+  //                 "type": "uri",
+  //                 "label": "แชร์ เพื่อรับรายได้ 30% จากยอดเสีย",
+  //                 "uri": "https://liff.line.me/1657611539-z41ew0PW/?root=" + profile.userId +  "&typeMarket=1"
+  //               },
+  //               "color": "#3482FA"
+  //             },
+  //             {
+  //               "type": "button",
+  //               "style": "primary",
+  //               "height": "sm",
+  //               "action": {
+  //                 "type": "uri",
+  //                 "label": "แชร์ เพื่อรับรายได้ 5% จากยอดเล่น",
+  //                 "uri": "https://liff.line.me/1657611539-z41ew0PW/?root=" + profile.userId +  "&typeMarket=2"
+  //               },
+  //               "color": "#3482FA"
+  //             },
+  //             {
+  //               "type": "button",
+  //               "style": "primary",
+  //               "height": "sm",
+  //               "action": {
+  //                 "type": "uri",
+  //                 "label": "แชร์ เพื่อรับรายได้ 100 บาท/คน ",
+  //                 "uri": "https://liff.line.me/1657611539-z41ew0PW/?root=" + profile.userId +  "&typeMarket=3"
+  //               },
+  //               "color": "#3482FA"
+  //             },
+  //             {
+  //               "type": "button",
+  //               "style": "primary",
+  //               "height": "sm",
+  //               "action": {
+  //                 "type": "uri",
+  //                 "label": "แชร์ เพื่อรับรายได้ 2% จากยอดฝาก",
+  //                 "uri": "https://liff.line.me/1657611539-z41ew0PW/?root=" + profile.userId +  "&typeMarket=4"
+  //               },
+  //               "color": "#3482FA"
+  //             },
+  //             {
+  //               "type": "box",
+  //               "layout": "vertical",
+  //               "contents": [],
+  //               "margin": "sm"
+  //             }
+  //           ],
+  //           "flex": 0
+  //         }
+  //       },
+  //     }]);
+  // };
+
+async function shareTarket(typeMarket) {
     const isFriend =  checkfriend();
     if(!isFriend)
     {
@@ -80,7 +232,7 @@
       window.location = "https://line.me/R/ti/p/@701fnoik";
     }
     else{
-      addChild();
+      addChild(typeMarket);
     }
     const message = liff.shareTargetPicker([
       {
@@ -93,11 +245,7 @@
             "url": "https://i.ibb.co/V2bPc0Q/logo-tanggai.jpg",
             "size": "full",
             "aspectRatio": "20:13",
-            "aspectMode": "cover",
-            "action": {
-              "type": "uri",
-              "uri": "https://line.me/R/ti/p/@701fnoik?param=11111"
-            }
+            "aspectMode": "cover"
           },
           "body": {
             "type": "box",
@@ -157,16 +305,6 @@
             "layout": "vertical",
             "spacing": "sm",
             "contents": [
-              // {
-              //   "type": "button",
-              //   "style": "primary",
-              //   "height": "sm",
-              //   "action": {
-              //     "type": "uri",
-              //     "label": "สมัคร ตอนนี้รับโบนัส X2",
-              //     "uri": "https://line.me/R/ti/p/@701fnoik?root=" + profile.userId
-              //   }
-              // },
               {
                 "type": "button",
                 "style": "primary",
@@ -174,7 +312,7 @@
                 "action": {
                   "type": "uri",
                   "label": "แชร์ เพื่อรับรายได้ 30% จากยอดเสีย",
-                  "uri": "https://liff.line.me/1657611539-z41ew0PW/?root=" + profile.userId +  "&typeMarket=1"
+                  "uri": "https://liff.line.me/1657611539-z41ew0PW/?root=" + profile.userId
                 },
                 "color": "#3482FA"
               },
@@ -185,7 +323,7 @@
                 "action": {
                   "type": "uri",
                   "label": "แชร์ เพื่อรับรายได้ 5% จากยอดเล่น",
-                  "uri": "https://liff.line.me/1657611539-z41ew0PW/?root=" + profile.userId +  "&typeMarket=2"
+                  "uri": "https://liff.line.me/1657611539-z41ew0PW/?root=" + profile.userId
                 },
                 "color": "#3482FA"
               },
@@ -195,8 +333,8 @@
                 "height": "sm",
                 "action": {
                   "type": "uri",
-                  "label": "แชร์ เพื่อรับรายได้ 100 บาท/คน ",
-                  "uri": "https://liff.line.me/1657611539-z41ew0PW/?root=" + profile.userId +  "&typeMarket=3"
+                  "label": "แชร์ เพื่อรับรายได้ 100 บาท/คน",
+                  "uri": "https://liff.line.me/1657611539-z41ew0PW/?root=" + profile.userId
                 },
                 "color": "#3482FA"
               },
@@ -207,7 +345,7 @@
                 "action": {
                   "type": "uri",
                   "label": "แชร์ เพื่อรับรายได้ 2% จากยอดฝาก",
-                  "uri": "https://liff.line.me/1657611539-z41ew0PW/?root=" + profile.userId +  "&typeMarket=4"
+                  "uri": "https://liff.line.me/1657611539-z41ew0PW/?root=" + profile.userId
                 },
                 "color": "#3482FA"
               },
@@ -226,16 +364,46 @@
 
 
 
-async function sendMessage() {
-  if(!isFriend)
-  {
-    window.alert('not friend');
-    window.location = "https://line.me/R/ti/p/@701fnoik";
-  }
-  else{
-    window.alert("รายได้ของคุณ = ??")
-  }
-};
+  async function joinGroup(groupType) {
+    const isFriend =  checkfriend();
+    if(groupType == 1)
+    {
+      window.alert('กลุ่มนี้เข้าแล้วอยู่ดีมีแฮง อยู่แดงมีฮี');
+      window.location = "https://line.me/R/ti/p/@701fnoik";
+    }
+    else if(groupType == 2){
+      window.alert('กลุ่มนี้ใบ้หวยแม่นที่สุดในดาวอังคารแล้วค่ะ');
+      window.location = "https://line.me/R/ti/p/@701fnoik";
+    }
+    else if(groupType == 3){
+      window.alert('กลุ่มนี้ทำนายฝันแม่นมากกก แม่นจนนึกว่าฝันไป');
+      window.location = "https://line.me/R/ti/p/@701fnoik";
+    }
+    else if(groupType == 4){
+      window.alert('กลุ่มนี้แนะนำเทคนิคดีๆในการเล่นพนัน ให้ปังปูริ เย่ เย่');
+      window.location = "https://line.me/R/ti/p/@701fnoik";
+    }
+    else if(groupType == 5){
+      window.alert('กลุ่มนี้แฉกลโกงต่างๆที่น้องมินนี่ได้ประสบพบเจอมาค่ะ');
+      window.location = "https://line.me/R/ti/p/@701fnoik";
+    }
+  };
+
+
+// async function sendMessage() {
+//   if(!isFriend)
+//   {
+//     window.alert('not friend');
+//     window.location = "https://line.me/R/ti/p/@701fnoik";
+//   }
+//   else{
+//     window.alert("รายได้ของคุณ = ??")
+//   }
+// };
+
+
+
+
 
   onMount(async () => {
     if (!liff.isInClient()) {
@@ -251,26 +419,45 @@ async function sendMessage() {
 
 <!-- <Geolocation getPosition bind:coords /> -->
 <main>
-  <h1>แทงไก่ ออโต้</h1>
-  <h2>การันตี ชื่อนี้ไม่มีเสีย</h2>
+  <!-- <h1>แทงไก่ ออโต้</h1>
+  <h2>การันตี ชื่อนี้ไม่มีเสีย</h2> -->
   {#await promise}
     <p>LIFF init...</p>
   {:then}
   <a href="https://line.me/R/ti/p/@701fnoik"><img src="https://i.ibb.co/FgxhQFB/logo-tanggai-00001.jpg" alt="แทงไก่" border="0" /></a>
  <br>
-  <button class="button-91" on:click={(shareTarket)}>แชร์เพื่อรับรายได้</button>
-  <button class="button-91" on:click={sendMessage}>ตรวจสอบรายได้ </button>
+  <button class="button-91" on:click={() => shareTarket(1)}>แชร์ เพื่อรับรายได้ 30% จากยอดเสีย</button>
+  <br>
+  <button class="button-91" on:click={() => shareTarket(2)}>แชร์ เพื่อรับรายได้ 5% จากยอดเล่น</button>
+  <br>
+  <button class="button-91" on:click={() => shareTarket(3)}>แชร์ เพื่อรับรายได้ 100 บาท/คน</button>
+  <br>
+  <button class="button-91" on:click={() => shareTarket(4)}>แชร์ เพื่อรับรายได้ 2% จากยอดฝาก</button>
+  <!-- <button class="button-91" on:click={sendMessage}>ตรวจสอบรายได้ </button> -->
 
 
     <hr />
-    <h3>User Info</h3>
-    <ul>
+    <!-- <h3>ได้โปรด อ่านด้านล่าง หนูขอร้อง อิคึ..อิคึ..</h3>
+    <div class="center" >สวัสดีค่ะคุณ <strong>{profile.displayName}</strong> <br> </div>
+    <div>ทางเรามีบริการต่างๆ สิทธิพิเศษ แบบ Exclusive VIP ขอบอกว่างานนี้ฟรีไม่มีค่าใช้จ่ายนะค่ะ</div> -->
+    <!-- <ul>
       <li>
-        <strong>User Name</strong>
-        :<span>{profile.displayName}</span>
+        <span class=".center" >สวัสดีค่ะคุณ <strong>{profile.displayName}</strong> <br> </span>
+        <span class=".center" >สวัสดีค่ะคุณ <strong>{profile.displayName}</strong> <br> ทางเรามีบริการต่างๆ สิทธิพิเศษ แบบ Exclusive VIP<br>ไม่มีค่าใช้จ่ายเลยนะค่ะ </span>
       </li>
-    </ul>
+    </ul> -->
+    <!-- <div>กลุ่มนี้เข้าแล้วอยู่ดีมีแฮง อยู่แดงมีฮี</div> -->
+    <button class="button-70" on:click={() => joinGroup(1)}>หัวกรวย ใบ้หวย รวยชิปหาย</button>
+
+    <button class="button-70" on:click={() => joinGroup(2)}>ทำนายฝัน แม่นเหมือนจับวาง</button>
+
+    <button class="button-70" on:click={() => joinGroup(3)}>ดูดวง ลิตขิตฟ้าหรือจะสู้ กุรู้ก่อน</button>
+
+    <button class="button-70" on:click={() => joinGroup(4)}>เทคนิค เป็นต่อ เล่นให้เฟี้ยว เลี้ยวให้รอด</button>
+
+    <button class="button-70" on:click={() => joinGroup(5)}>แฉ กลโกง ไม่อยากหมดตูดเพราะถูกโกง</button>
     <h4 class="error">{errorMessage}</h4>
+
     <!-- <hr /> -->
     <!-- <h3>LIFF Info</h3>
     <ul>
@@ -317,6 +504,10 @@ async function sendMessage() {
     color: #2c3e50;
     margin-top: 60px;
   }
+  /* .center {
+  text-align: center;
+  border: 3px solid green;
+  } */
   .error {
     color: red;
   }
@@ -353,6 +544,61 @@ async function sendMessage() {
 
   cursor: pointer;
 
+  width: 320px;
+  margin-bottom: 4px;
+}
+
+
+/* CSS */
+.button-70 {
+  background-image: linear-gradient(#0dccea, #0d70ea);
+  border: 0;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .3) 0 5px 15px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: Montserrat,sans-serif;
+  font-size: .9em;
+  margin: 5px;
+  padding: 10px 15px;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-bottom: 5px;
+  width: 300px;
+}
+
+
+
+/* CSS */
+.button-88 {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 0.7em 1.4em 0.7em 1.1em;
+  color: white;
+  background: #ad5389;
+  background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%);
+  border: none;
+  box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+  letter-spacing: 0.05em;
+  border-radius: 20em;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-88:hover {
+  box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+}
+
+.button-88:active {
+  box-shadow: 0 0.3em 1em -0.5em #14a73e98;
 }
 </style>
 
