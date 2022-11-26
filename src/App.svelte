@@ -155,7 +155,7 @@ async function shareTarket(typeMarket) {
             "contents": [
               {
                 "type": "text",
-                "text": "กลุ่มลับ VIP Exclusive",
+                "text": "แทงไก่ออโต้",
                 "weight": "bold",
                 "size": "xl",
                 "align": "center",
@@ -205,6 +205,85 @@ async function shareTarket(typeMarket) {
                 "color": "#3482FA"
               },
               {
+                "type": "text",
+                "text": "กลุ่มลับ VIP Exclusive",
+                "weight": "bold",
+                "size": "xl",
+                "align": "center",
+              },
+              ,
+              {
+                "type": "button",
+                "style": "primary",
+                "height": "sm",
+                "action": {
+                  "type": "uri",
+                  "label": "หัวกรวย ใบ้หวย รวยชิปหาย",
+                  "uri": "https://line.me/R/ti/p/@701fnoik"
+                },
+   
+              }
+              ,
+              {
+                "type": "button",
+                "style": "primary",
+                "height": "sm",
+                "action": {
+                  "type": "uri",
+                  "label": "ไม่อยากพลาด อย่าซื้อตัวนี้",
+                  "uri": "https://line.me/R/ti/p/@701fnoik"
+                },
+ 
+              }
+              ,
+              {
+                "type": "button",
+                "style": "primary",
+                "height": "sm",
+                "action": {
+                  "type": "uri",
+                  "label": "ทำนายฝัน แม่นเหมือนจับวาง",
+                  "uri": "https://line.me/R/ti/p/@701fnoik"
+                },
+          
+              }
+              ,
+              {
+                "type": "button",
+                "style": "primary",
+                "height": "sm",
+                "action": {
+                  "type": "uri",
+                  "label": "ดูดวง ลิตขิตฟ้าหรือจะสู้ รู้งี้",
+                  "uri": "https://line.me/R/ti/p/@701fnoik"
+                },
+           
+              }
+              ,
+              {
+                "type": "button",
+                "style": "primary",
+                "height": "sm",
+                "action": {
+                  "type": "uri",
+                  "label": "เทคนิค เป็นต่อ เล่นให้เฟี้ยว เลี้ยวให้รอด",
+                  "uri": "https://line.me/R/ti/p/@701fnoik"
+                },
+   
+              }
+              ,
+              {
+                "type": "button",
+                "style": "primary",
+                "height": "sm",
+                "action": {
+                  "type": "uri",
+                  "label": "แฉ กลโกง ไม่อยากหมดตูดเพราะถูกโกง",
+                  "uri": "https://line.me/R/ti/p/@701fnoik"
+                },
+          
+              } ,
+              {
                 "type": "box",
                 "layout": "vertical",
                 "contents": [],
@@ -240,6 +319,10 @@ async function shareTarket(typeMarket) {
     }
     else if(groupType == 5){
       window.alert('กลุ่มนี้แฉกลโกงต่างๆที่น้องมินนี่ได้ประสบพบเจอมาค่ะ');
+      window.location = "https://line.me/R/ti/p/@701fnoik";
+    }
+    else if(groupType == 6){
+      window.alert('ไม่อยากพลาด อย่าซื้อตัวนี้');
       window.location = "https://line.me/R/ti/p/@701fnoik";
     }
   };
