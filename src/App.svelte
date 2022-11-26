@@ -71,159 +71,6 @@
     });
   }
 
-
-  // const shareTarket = () => {
-  //   const isFriend =  checkfriend();
-  //   if(!isFriend)
-  //   {
-  //     window.alert('not friend');
-  //     window.location = "https://line.me/R/ti/p/@701fnoik";
-  //   }
-  //   else{
-  //     addChild();
-  //   }
-  //   const message = liff.shareTargetPicker([
-  //     {
-  //       type: "flex",
-  //       altText: "this is a flex message",
-  //       contents:{
-  //         "type": "bubble",
-  //         "hero": {
-  //           "type": "image",
-  //           "url": "https://i.ibb.co/V2bPc0Q/logo-tanggai.jpg",
-  //           "size": "full",
-  //           "aspectRatio": "20:13",
-  //           "aspectMode": "cover",
-  //           "action": {
-  //             "type": "uri",
-  //             "uri": "https://line.me/R/ti/p/@701fnoik?param=11111"
-  //           }
-  //         },
-  //         "body": {
-  //           "type": "box",
-  //           "layout": "vertical",
-  //           "contents": [
-  //             {
-  //               "type": "text",
-  //               "text": "แทงไก่ ออโต้",
-  //               "weight": "bold",
-  //               "size": "xl"
-  //             },
-  //             {
-  //               "type": "box",
-  //               "layout": "baseline",
-  //               "margin": "md",
-  //               "contents": [
-  //                 {
-  //                   "type": "icon",
-  //                   "size": "sm",
-  //                   "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-  //                 },
-  //                 {
-  //                   "type": "icon",
-  //                   "size": "sm",
-  //                   "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-  //                 },
-  //                 {
-  //                   "type": "icon",
-  //                   "size": "sm",
-  //                   "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-  //                 },
-  //                 {
-  //                   "type": "icon",
-  //                   "size": "sm",
-  //                   "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-  //                 },
-  //                 {
-  //                   "type": "icon",
-  //                   "size": "sm",
-  //                   "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-  //                 },
-  //                 {
-  //                   "type": "text",
-  //                   "text": "การันตีระดับ 5 ดาว",
-  //                   "size": "sm",
-  //                   "color": "#999999",
-  //                   "margin": "md",
-  //                   "flex": 0
-  //                 }
-  //               ]
-  //             },
-              
-  //           ]
-  //         },
-  //         "footer": {
-  //           "type": "box",
-  //           "layout": "vertical",
-  //           "spacing": "sm",
-  //           "contents": [
-  //             // {
-  //             //   "type": "button",
-  //             //   "style": "primary",
-  //             //   "height": "sm",
-  //             //   "action": {
-  //             //     "type": "uri",
-  //             //     "label": "สมัคร ตอนนี้รับโบนัส X2",
-  //             //     "uri": "https://line.me/R/ti/p/@701fnoik?root=" + profile.userId
-  //             //   }
-  //             // },
-  //             {
-  //               "type": "button",
-  //               "style": "primary",
-  //               "height": "sm",
-  //               "action": {
-  //                 "type": "uri",
-  //                 "label": "แชร์ เพื่อรับรายได้ 30% จากยอดเสีย",
-  //                 "uri": "https://liff.line.me/1657611539-z41ew0PW/?root=" + profile.userId +  "&typeMarket=1"
-  //               },
-  //               "color": "#3482FA"
-  //             },
-  //             {
-  //               "type": "button",
-  //               "style": "primary",
-  //               "height": "sm",
-  //               "action": {
-  //                 "type": "uri",
-  //                 "label": "แชร์ เพื่อรับรายได้ 5% จากยอดเล่น",
-  //                 "uri": "https://liff.line.me/1657611539-z41ew0PW/?root=" + profile.userId +  "&typeMarket=2"
-  //               },
-  //               "color": "#3482FA"
-  //             },
-  //             {
-  //               "type": "button",
-  //               "style": "primary",
-  //               "height": "sm",
-  //               "action": {
-  //                 "type": "uri",
-  //                 "label": "แชร์ เพื่อรับรายได้ 100 บาท/คน ",
-  //                 "uri": "https://liff.line.me/1657611539-z41ew0PW/?root=" + profile.userId +  "&typeMarket=3"
-  //               },
-  //               "color": "#3482FA"
-  //             },
-  //             {
-  //               "type": "button",
-  //               "style": "primary",
-  //               "height": "sm",
-  //               "action": {
-  //                 "type": "uri",
-  //                 "label": "แชร์ เพื่อรับรายได้ 2% จากยอดฝาก",
-  //                 "uri": "https://liff.line.me/1657611539-z41ew0PW/?root=" + profile.userId +  "&typeMarket=4"
-  //               },
-  //               "color": "#3482FA"
-  //             },
-  //             {
-  //               "type": "box",
-  //               "layout": "vertical",
-  //               "contents": [],
-  //               "margin": "sm"
-  //             }
-  //           ],
-  //           "flex": 0
-  //         }
-  //       },
-  //     }]);
-  // };
-
 async function shareTarket(typeMarket) {
     const isFriend =  checkfriend();
     if(!isFriend)
@@ -511,7 +358,7 @@ async function shareTarket(typeMarket) {
   .error {
     color: red;
   }
-  ul {
+  /* ul {
     list-style-type: none;
     text-align: left;
     margin: 0;
@@ -523,7 +370,7 @@ async function shareTarket(typeMarket) {
   }
   li span {
     margin: 5px;
-  }
+  } */
 
 
   .button-91 {
@@ -573,7 +420,7 @@ async function shareTarket(typeMarket) {
 
 
 /* CSS */
-.button-88 {
+/* .button-88 {
   display: flex;
   align-items: center;
   font-family: inherit;
@@ -599,7 +446,7 @@ async function shareTarket(typeMarket) {
 
 .button-88:active {
   box-shadow: 0 0.3em 1em -0.5em #14a73e98;
-}
+} */
 </style>
 
 
