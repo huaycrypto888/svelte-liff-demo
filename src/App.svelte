@@ -64,14 +64,167 @@
     let root = urlparam.get("root")
     let child = profile.userId
 
-    // const response = await fetch('https://chickenad.vercel.app/api/customers', {
+    const response = await fetch('https://chickenad.vercel.app/api/customers', {
 
-    //   method: 'POST',
-    //   body: JSON.stringify({ root, child, typeMarket })
-    // });
+      method: 'POST',
+      body: JSON.stringify({ root, child, typeMarket })
+    });
   }
 
-  async function shareTarket(typeMarket) {
+
+  // const shareTarket = () => {
+  //   const isFriend =  checkfriend();
+  //   if(!isFriend)
+  //   {
+  //     window.alert('not friend');
+  //     window.location = "https://line.me/R/ti/p/@701fnoik";
+  //   }
+  //   else{
+  //     addChild();
+  //   }
+  //   const message = liff.shareTargetPicker([
+  //     {
+  //       type: "flex",
+  //       altText: "this is a flex message",
+  //       contents:{
+  //         "type": "bubble",
+  //         "hero": {
+  //           "type": "image",
+  //           "url": "https://i.ibb.co/V2bPc0Q/logo-tanggai.jpg",
+  //           "size": "full",
+  //           "aspectRatio": "20:13",
+  //           "aspectMode": "cover",
+  //           "action": {
+  //             "type": "uri",
+  //             "uri": "https://line.me/R/ti/p/@701fnoik?param=11111"
+  //           }
+  //         },
+  //         "body": {
+  //           "type": "box",
+  //           "layout": "vertical",
+  //           "contents": [
+  //             {
+  //               "type": "text",
+  //               "text": "แทงไก่ ออโต้",
+  //               "weight": "bold",
+  //               "size": "xl"
+  //             },
+  //             {
+  //               "type": "box",
+  //               "layout": "baseline",
+  //               "margin": "md",
+  //               "contents": [
+  //                 {
+  //                   "type": "icon",
+  //                   "size": "sm",
+  //                   "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+  //                 },
+  //                 {
+  //                   "type": "icon",
+  //                   "size": "sm",
+  //                   "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+  //                 },
+  //                 {
+  //                   "type": "icon",
+  //                   "size": "sm",
+  //                   "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+  //                 },
+  //                 {
+  //                   "type": "icon",
+  //                   "size": "sm",
+  //                   "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+  //                 },
+  //                 {
+  //                   "type": "icon",
+  //                   "size": "sm",
+  //                   "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+  //                 },
+  //                 {
+  //                   "type": "text",
+  //                   "text": "การันตีระดับ 5 ดาว",
+  //                   "size": "sm",
+  //                   "color": "#999999",
+  //                   "margin": "md",
+  //                   "flex": 0
+  //                 }
+  //               ]
+  //             },
+              
+  //           ]
+  //         },
+  //         "footer": {
+  //           "type": "box",
+  //           "layout": "vertical",
+  //           "spacing": "sm",
+  //           "contents": [
+  //             // {
+  //             //   "type": "button",
+  //             //   "style": "primary",
+  //             //   "height": "sm",
+  //             //   "action": {
+  //             //     "type": "uri",
+  //             //     "label": "สมัคร ตอนนี้รับโบนัส X2",
+  //             //     "uri": "https://line.me/R/ti/p/@701fnoik?root=" + profile.userId
+  //             //   }
+  //             // },
+  //             {
+  //               "type": "button",
+  //               "style": "primary",
+  //               "height": "sm",
+  //               "action": {
+  //                 "type": "uri",
+  //                 "label": "แชร์ เพื่อรับรายได้ 30% จากยอดเสีย",
+  //                 "uri": "https://liff.line.me/1657611539-z41ew0PW/?root=" + profile.userId +  "&typeMarket=1"
+  //               },
+  //               "color": "#3482FA"
+  //             },
+  //             {
+  //               "type": "button",
+  //               "style": "primary",
+  //               "height": "sm",
+  //               "action": {
+  //                 "type": "uri",
+  //                 "label": "แชร์ เพื่อรับรายได้ 5% จากยอดเล่น",
+  //                 "uri": "https://liff.line.me/1657611539-z41ew0PW/?root=" + profile.userId +  "&typeMarket=2"
+  //               },
+  //               "color": "#3482FA"
+  //             },
+  //             {
+  //               "type": "button",
+  //               "style": "primary",
+  //               "height": "sm",
+  //               "action": {
+  //                 "type": "uri",
+  //                 "label": "แชร์ เพื่อรับรายได้ 100 บาท/คน ",
+  //                 "uri": "https://liff.line.me/1657611539-z41ew0PW/?root=" + profile.userId +  "&typeMarket=3"
+  //               },
+  //               "color": "#3482FA"
+  //             },
+  //             {
+  //               "type": "button",
+  //               "style": "primary",
+  //               "height": "sm",
+  //               "action": {
+  //                 "type": "uri",
+  //                 "label": "แชร์ เพื่อรับรายได้ 2% จากยอดฝาก",
+  //                 "uri": "https://liff.line.me/1657611539-z41ew0PW/?root=" + profile.userId +  "&typeMarket=4"
+  //               },
+  //               "color": "#3482FA"
+  //             },
+  //             {
+  //               "type": "box",
+  //               "layout": "vertical",
+  //               "contents": [],
+  //               "margin": "sm"
+  //             }
+  //           ],
+  //           "flex": 0
+  //         }
+  //       },
+  //     }]);
+  // };
+
+async function shareTarket(typeMarket) {
     const isFriend =  checkfriend();
     if(!isFriend)
     {
@@ -102,8 +255,7 @@
                 "type": "text",
                 "text": "แทงไก่ ออโต้",
                 "weight": "bold",
-                "size": "xl",
-                "align":"center"
+                "size": "xl"
               },
               {
                 "type": "box",
@@ -198,104 +350,6 @@
                 "color": "#3482FA"
               },
               {
-                "type": "text",
-                "text": "ห้องลับสุด VIP Exclusive",
-                "weight": "bold",
-                "size": "xl",
-                "align":"center"
-              },
-              {
-                "type": "button",
-                "style": "primary",
-                "height": "sm",
-                "action": {
-                  "type": "uri",
-                  "label": "คลิปเด็ด 18+  Onlyfan, คลิปหลุด, คลิปลับ, คลิปฉาว",
-                  "uri": "https://line.me/R/ti/p/@701fnoik"
-                },
-               
-              },
-              {
-                "type": "button",
-                "style": "primary",
-                "height": "sm",
-                "action": {
-                  "type": "uri",
-                  "label": "หัวกรวย ใบ้หวย รวยชิปหาย",
-                  "uri": "https://line.me/R/ti/p/@701fnoik"
-                },
-              },
-              {
-                "type": "button",
-                "style": "primary",
-                "height": "sm",
-                "action": {
-                  "type": "uri",
-                  "label": "เลขที่ไม่ออก อย่าดื้อ อย่าซื้อตัวนี้",
-                  "uri": "https://line.me/R/ti/p/@701fnoik"
-                },
-              },
-              {
-                "type": "button",
-                "style": "primary",
-                "height": "sm",
-                "action": {
-                  "type": "uri",
-                  "label": "ทำนายฝัน แม่นเหมือนจับวาง",
-                  "uri": "https://line.me/R/ti/p/@701fnoik"
-                },
-              },
-              // {
-              //   "type": "button",
-              //   "style": "primary",
-              //   "height": "sm",
-              //   "action": {
-              //     "type": "uri",
-              //     "label": "โปรโมชั่นดีๆ จากทุกเว็บ ไม่ต้องหา เราคัดมาให้แล้ว",
-              //     "uri": "https://line.me/R/ti/p/@701fnoik"
-              //   },
-              // },
-              {
-                "type": "button",
-                "style": "primary",
-                "height": "sm",
-                "action": {
-                  "type": "uri",
-                  "label": "ดูดวง ลิตขิตฟ้าหรือจะสู้ กุรู้ก่อน",
-                  "uri": "https://line.me/R/ti/p/@701fnoik"
-                },
-              },
-              {
-                "type": "button",
-                "style": "primary",
-                "height": "sm",
-                "action": {
-                  "type": "uri",
-                  "label": "เทคนิค เป็นต่อ เล่นให้เฟี้ยว เลี้ยวให้เป็น",
-                  "uri": "https://line.me/R/ti/p/@701fnoik"
-                },
-              },
-              {
-                "type": "button",
-                "style": "primary",
-                "height": "sm",
-                "action": {
-                  "type": "uri",
-                  "label": "แฉ กลโกง หมดตูดเพราะถูกโกง",
-                  "uri": "https://line.me/R/ti/p/@701fnoik"
-                },
-              },
-              // {
-              //   "type": "button",
-              //   "style": "primary",
-              //   "height": "sm",
-              //   "action": {
-              //     "type": "uri",
-              //     "label": "108 เทคนิคจีบให้ได้เยส เยอสแน่นอน คืนนี้เยสแน่นอน",
-              //     "uri": "https://line.me/R/ti/p/@701fnoik"
-              //   },
-              // },
-              {
                 "type": "box",
                 "layout": "vertical",
                 "contents": [],
@@ -310,46 +364,30 @@
 
 
 
-  async function joinGroup(groupType) {
-    const isFriend =  checkfriend();
-    if(groupType == 1)
-    {
-      window.alert('กลุ่มนี้เข้าแล้วอยู่ดีมีแฮง อยู่แดงมีฮี');
-      window.location = "https://line.me/R/ti/p/@701fnoik";
-    }
-    else if(groupType == 2){
-      window.alert('กลุ่มนี้ใบ้หวยแม่นที่สุดในดาวอังคารแล้วค่ะ');
-      window.location = "https://line.me/R/ti/p/@701fnoik";
-    }
-    else if(groupType == 3){
-      window.alert('กลุ่มนี้ทำนายฝันแม่นมากกก แม่นจนนึกว่าฝันไป');
-      window.location = "https://line.me/R/ti/p/@701fnoik";
-    }
-    else if(groupType == 4){
-      window.alert('กลุ่มนี้แนะนำเทคนิคดีๆในการเล่นพนัน ให้ปังปูริ เย่ เย่');
-      window.location = "https://line.me/R/ti/p/@701fnoik";
-    }
-    // else if(groupType == 5){
-    //   window.alert('กลุ่มนี้แฉกลโกงต่างๆที่น้องมินนี่ได้ประสบพบเจอมาค่ะ');
-    //   window.location = "https://line.me/R/ti/p/@701fnoik";
-    // }
-    else if(groupType == 6){
-      window.alert('เลขที่ไม่ออก ไม่อยากพลาด อย่าซื้อตัวนี้');
-      window.location = "https://line.me/R/ti/p/@701fnoik";
-    }
-    // else if(groupType == 7){
-    //   window.alert('108 เทคนิคจีบให้ได้เยส เยอสแน่นอน คืนนี้เยสแน่นอน');
-    //   window.location = "https://line.me/R/ti/p/@701fnoik";
-    // }
-    // else if(groupType == 8){
-    //   window.alert('คลิปเด็ด 18+ คลิปหลุด - ลับ -ฉาว');
-    //   window.location = "https://line.me/R/ti/p/@701fnoik";
-    // }
-    // else if(groupType == 9){
-    //   window.alert('โปรโมชั่นดีๆ จากทุกเว็บ ไม่ต้องหา เราคัดมาให้แล้ว');
-    //   window.location = "https://line.me/R/ti/p/@701fnoik";
-    // }
-  };
+  // async function joinGroup(groupType) {
+
+  //   if(groupType == 1)
+  //   {
+  //     window.alert('กลุ่มนี้เข้าแล้วอยู่ดีมีแฮง อยู่แดงมีฮี');
+  //     window.location = "https://line.me/R/ti/p/@701fnoik";
+  //   }
+  //   else if(groupType == 2){
+  //     window.alert('กลุ่มนี้ใบ้หวยแม่นที่สุดในดาวอังคารแล้วค่ะ');
+  //     window.location = "https://line.me/R/ti/p/@701fnoik";
+  //   }
+  //   else if(groupType == 3){
+  //     window.alert('กลุ่มนี้ทำนายฝันแม่นมากกก แม่นจนนึกว่าฝันไป');
+  //     window.location = "https://line.me/R/ti/p/@701fnoik";
+  //   }
+  //   else if(groupType == 4){
+  //     window.alert('กลุ่มนี้แนะนำเทคนิคดีๆในการเล่นพนัน ให้ปังปูริ เย่ เย่');
+  //     window.location = "https://line.me/R/ti/p/@701fnoik";
+  //   }
+  //   else if(groupType == 5){
+  //     window.alert('กลุ่มนี้แฉกลโกงต่างๆที่น้องมินนี่ได้ประสบพบเจอมาค่ะ');
+  //     window.location = "https://line.me/R/ti/p/@701fnoik";
+  //   }
+  // };
 
 
 // async function sendMessage() {
@@ -396,7 +434,9 @@
   <br>
   <button class="button-91" on:click={() => shareTarket(4)}>แชร์ เพื่อรับรายได้ 2% จากยอดฝาก</button>
   <!-- <button class="button-91" on:click={sendMessage}>ตรวจสอบรายได้ </button> -->
-
+  <!-- <form action="https://line.me/R/ti/p/@701fnoik">
+    <input class="button-70"  type="submit" value="google">
+</form> -->
 
     <hr />
     <!-- <h3>ได้โปรด อ่านด้านล่าง หนูขอร้อง อิคึ..อิคึ..</h3>
@@ -409,24 +449,6 @@
       </li>
     </ul> -->
     <!-- <div>กลุ่มนี้เข้าแล้วอยู่ดีมีแฮง อยู่แดงมีฮี</div> -->
-    <!-- <button class="button-70" on:click={() => joinGroup(8)}>คลิปเด็ด 18+ คลิปหลุด- ลับ - ฉาว</button> -->
-
-    <button class="button-70" on:click={() => joinGroup(1)}>หัวกรวย ใบ้หวย รวยชิปหาย</button>
-
-    <button class="button-70" on:click={() => joinGroup(6)}>เลขที่ไม่ออก ไม่อยากพลาด อย่าซื้อตัวนี้</button>
-
-    <!-- <button class="button-70" on:click={() => joinGroup(9)}>ทำนายฝัน แม่นเหมือนจับวาง</button> -->
-
-    <button class="button-70" on:click={() => joinGroup(2)}>ทำนายฝัน แม่นเหมือนจับวาง</button>
-
-    <button class="button-70" on:click={() => joinGroup(3)}>ดูดวง ลิตขิตฟ้าหรือจะสู้ กุรู้ก่อน</button>
-
-    <button class="button-70" on:click={() => joinGroup(4)}>เทคนิค เป็นต่อ เล่นให้เฟี้ยว เลี้ยวให้รอด</button>
-
-    <!-- <button class="button-70" on:click={() => joinGroup(5)}>แฉ กลโกง หมดตูดเพราะถูกโกง</button> -->
-
-    <!-- <button class="button-70" on:click={() => joinGroup(7)}>108 เทคนิคจีบให้ได้เยส เยอสแน่นอน คืนนี้เยสแน่นอน</button> -->
-  
     <h4 class="error">{errorMessage}</h4>
 
     <!-- <hr /> -->
@@ -458,8 +480,8 @@
       </li>
     </ul> -->
     <hr />
-    <h3>เพิ่มเพื่อนผ่าน QR Code</h3>
-    <img src="./liff-qr.png" alt="" />
+    <!-- <h3>เพิ่มเพื่อนผ่าน QR Code</h3>
+    <img src="./liff-qr.png" alt="" /> -->
   {:catch e}
     <p>LIFF init failed.</p>
     <p><code>{`${e}`}</code></p>
@@ -520,7 +542,7 @@
 }
 
 
-/* CSS */
+/* 
 .button-70 {
   background-image: linear-gradient(#0dccea, #0d70ea);
   border: 0;
@@ -537,14 +559,13 @@
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  margin-bottom: 5px;
+  margin: auto;
   width: 300px;
-}
+} */
 
 
-
-/* CSS */
-/* .button-88 {
+/* 
+.button-88 {
   display: flex;
   align-items: center;
   font-family: inherit;
