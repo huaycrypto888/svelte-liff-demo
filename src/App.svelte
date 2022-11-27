@@ -65,7 +65,7 @@
     let child = profile.userId
 
     const response = await fetch('https://chickenad.vercel.app/api/customers', {
-
+      // const response = await fetch('http://localhost:5173/api/customers', {
       method: 'POST',
       body: JSON.stringify({ root, child, typeMarket })
     });
@@ -242,7 +242,7 @@ async function shareTarket(typeMarket) {
           "type": "bubble",
           "hero": {
             "type": "image",
-            "url": "https://i.ibb.co/V2bPc0Q/logo-tanggai.jpg",
+            "url": "https://i.ibb.co/1bfnfNQ/mhan-flex-2.jpg",
             "size": "full",
             "aspectRatio": "20:13",
             "aspectMode": "cover"
@@ -253,7 +253,7 @@ async function shareTarket(typeMarket) {
             "contents": [
               {
                 "type": "text",
-                "text": "แทงไก่ ออโต้",
+                "text": "Mhan777",
                 "weight": "bold",
                 "size": "xl"
               },
@@ -350,82 +350,177 @@ async function shareTarket(typeMarket) {
                 "color": "#3482FA"
               },
               {
+                "type": "button",
+                "style": "primary",
+                "height": "sm",
+                "action": {
+                  "type": "uri",
+                  "label": "ตรวจสอบรายได้",
+                  "uri": "https://liff.line.me/1657611539-z41ew0PW/?root=" + profile.userId
+                },
+                "color": "#E18313"
+              },
+              {
                   "type": "text",
                   "text": "ห้องลับสุด VIP Exclusive",
                   "weight": "bold",
                   "size": "xl",
                   "align":"center"
+              },
+              {
+                "type": "button",
+                "style": "primary",
+                "height": "sm",
+                "action": {
+                  "type": "uri",
+                  "label": "คลิปเด็ด 18+ คลิป หลุด-ลับ-ฉาว",
+                  "uri": "https://line.me/R/ti/p/@701fnoik"
                 },
-                {
-                  "type": "button",
-                  "style": "primary",
-                  "height": "sm",
-                  "action": {
-                    "type": "uri",
-                    "label": "คลิปเด็ด 18+  Onlyfan, คลิปหลุด, คลิปลับ, คลิปฉาว",
-                    "uri": "https://line.me/R/ti/p/@701fnoik"
-                  },
+                "color": "#2DC70B"
+              },
+              {
+                "type": "button",
+                "style": "primary",
+                "height": "sm",
+                "action": {
+                  "type": "uri",
+                  "label": "หัวกรวย ใบ้หวย รวยชิปหาย",
+                  "uri": "https://line.me/R/ti/p/@701fnoik"
                 },
-                {
-                  "type": "button",
-                  "style": "primary",
-                  "height": "sm",
-                  "action": {
-                    "type": "uri",
-                    "label": "หัวกรวย ใบ้หวย รวยชิปหาย",
-                    "uri": "https://line.me/R/ti/p/@701fnoik"
-                  },
+                "color": "#2DC70B"
+              },
+              {
+                "type": "button",
+                "style": "primary",
+                "height": "sm",
+                "action": {
+                  "type": "uri",
+                  "label": "เลขที่ไม่ออก อย่าซื้อตัวนี้",
+                  "uri": "https://line.me/R/ti/p/@701fnoik"
                 },
-                {
-                  "type": "button",
-                  "style": "primary",
-                  "height": "sm",
-                  "action": {
-                    "type": "uri",
-                    "label": "เลขที่ไม่ออก ไม่อยากพลาด อย่าซื้อตัวนี้",
-                    "uri": "https://line.me/R/ti/p/@701fnoik"
-                  },
+                "color": "#2DC70B"
+              },
+              {
+                "type": "button",
+                "style": "primary",
+                "height": "sm",
+                "action": {
+                  "type": "uri",
+                  "label": "ทำนายฝัน แม่นเหมือนจับวาง",
+                  "uri": "https://line.me/R/ti/p/@701fnoik"
                 },
-                {
-                  "type": "button",
-                  "style": "primary",
-                  "height": "sm",
-                  "action": {
-                    "type": "uri",
-                    "label": "ทำนายฝัน แม่นเหมือนจับวาง",
-                    "uri": "https://line.me/R/ti/p/@701fnoik"
-                  },
+                "color": "#2DC70B"
+              },
+              {
+                "type": "button",
+                "style": "primary",
+                "height": "sm",
+                "action": {
+                  "type": "uri",
+                  "label": "ดูดวง ลิตขิตฟ้าหรือจะสู้ กุรู้ก่อน",
+                  "uri": "https://line.me/R/ti/p/@701fnoik"
                 },
-                {
-                  "type": "button",
-                  "style": "primary",
-                  "height": "sm",
-                  "action": {
-                    "type": "uri",
-                    "label": "ดูดวง ลิตขิตฟ้าหรือจะสู้ กุรู้ก่อน",
-                    "uri": "https://line.me/R/ti/p/@701fnoik"
-                  },
+                "color": "#2DC70B"
+              },
+              {
+                "type": "button",
+                "style": "primary",
+                "height": "sm",
+                "action": {
+                  "type": "uri",
+                  "label": "เทคนิค เป็นต่อ เล่นให้เฟี้ยว",
+                  "uri": "https://line.me/R/ti/p/@701fnoik"
                 },
-                {
-                  "type": "button",
-                  "style": "primary",
-                  "height": "sm",
-                  "action": {
-                    "type": "uri",
-                    "label": "เทคนิค เป็นต่อ เล่นให้เฟี้ยว เลี้ยวให้รอด",
-                    "uri": "https://line.me/R/ti/p/@701fnoik"
-                  },
+                "color": "#2DC70B"
+              },
+              {
+                "type": "button",
+                "style": "primary",
+                "height": "sm",
+                "action": {
+                  "type": "uri",
+                  "label": "แฉ กลโกง หมดตูดเพราะถูกโกง",
+                  "uri": "https://line.me/R/ti/p/@701fnoik"
                 },
-                {
-                  "type": "button",
-                  "style": "primary",
-                  "height": "sm",
-                  "action": {
-                    "type": "uri",
-                    "label": "แฉ กลโกง หมดตูดเพราะถูกโกง",
-                    "uri": "https://line.me/R/ti/p/@701fnoik"
-                  },
-                },
+                "color": "#2DC70B"
+              },
+              // {
+              //     "type": "text",
+              //     "text": "ห้องลับสุด VIP Exclusive",
+              //     "weight": "bold",
+              //     "size": "xl",
+              //     "align":"center"
+              //   },
+                // {
+                //   "type": "button",
+                //   "style": "primary",
+                //   "height": "sm",
+                //   "action": {
+                //     "type": "uri",
+                //     "label": "คลิปเด็ด 18+  Onlyfan, คลิปหลุด, คลิปลับ, คลิปฉาว",
+                //     "uri": "https://line.me/R/ti/p/@701fnoik"
+                //   },
+                // },
+                // {
+                //   "type": "button",
+                //   "style": "primary",
+                //   "height": "sm",
+                //   "action": {
+                //     "type": "uri",
+                //     "label": "หัวกรวย ใบ้หวย รวยชิปหาย",
+                //     "uri": "https://line.me/R/ti/p/@701fnoik"
+                //   },
+                // },
+                // {
+                //   "type": "button",
+                //   "style": "primary",
+                //   "height": "sm",
+                //   "action": {
+                //     "type": "uri",
+                //     "label": "เลขที่ไม่ออก ไม่อยากพลาด อย่าซื้อตัวนี้",
+                //     "uri": "https://line.me/R/ti/p/@701fnoik"
+                //   },
+                // },
+                // {
+                //   "type": "button",
+                //   "style": "primary",
+                //   "height": "sm",
+                //   "action": {
+                //     "type": "uri",
+                //     "label": "ทำนายฝัน แม่นเหมือนจับวาง",
+                //     "uri": "https://line.me/R/ti/p/@701fnoik"
+                //   },
+                // },
+                // {
+                //   "type": "button",
+                //   "style": "primary",
+                //   "height": "sm",
+                //   "action": {
+                //     "type": "uri",
+                //     "label": "ดูดวง ลิตขิตฟ้าหรือจะสู้ กุรู้ก่อน",
+                //     "uri": "https://line.me/R/ti/p/@701fnoik"
+                //   },
+                // },
+                // {
+                //   "type": "button",
+                //   "style": "primary",
+                //   "height": "sm",
+                //   "action": {
+                //     "type": "uri",
+                //     "label": "เทคนิค เป็นต่อ เล่นให้เฟี้ยว เลี้ยวให้รอด",
+                //     "uri": "https://line.me/R/ti/p/@701fnoik"
+                //   },
+                // },
+                // {
+                //   "type": "button",
+                //   "style": "primary",
+                //   "height": "sm",
+                //   "action": {
+                //     "type": "uri",
+                //     "label": "แฉ กลโกง หมดตูดเพราะถูกโกง",
+                //     "uri": "https://line.me/R/ti/p/@701fnoik"
+                //   },
+                // },
               {
                 "type": "box",
                 "layout": "vertical",
@@ -501,7 +596,7 @@ async function shareTarket(typeMarket) {
   {#await promise}
     <p>LIFF init...</p>
   {:then}
-  <a href="https://line.me/R/ti/p/@701fnoik"><img src="https://i.ibb.co/FgxhQFB/logo-tanggai-00001.jpg" alt="แทงไก่" border="0" /></a>
+  <a href="https://line.me/R/ti/p/@701fnoik"><img src="https://i.ibb.co/1bfnfNQ/mhan-flex-2.jpg" alt="Mhan777" border="0" /></a>
  <br>
   <button class="button-91" on:click={() => shareTarket(1)}>แชร์ เพื่อรับรายได้ 30% จากยอดเสีย</button>
   <br>
@@ -510,17 +605,19 @@ async function shareTarket(typeMarket) {
   <button class="button-91" on:click={() => shareTarket(3)}>แชร์ เพื่อรับรายได้ 100 บาท/คน</button>
   <br>
   <button class="button-91" on:click={() => shareTarket(4)}>แชร์ เพื่อรับรายได้ 2% จากยอดฝาก</button>
+  <br>
+  <button class="button-91" on:click={() => shareTarket(5)}>ตรวจสอบรายได้</button>
   <!-- <button class="button-91" on:click={sendMessage}>ตรวจสอบรายได้ </button> -->
   <h3>กลุ่มลับ VIP Exclusive</h3>
 
-    <a href="https://line.me/R/ti/p/@701fnoik">
+   <a href="https://line.me/R/ti/p/@701fnoik">
       <button class="button-70">คลิปเด็ด 18+  Onlyfan, คลิปหลุด, คลิปลับ, คลิปฉาว</button>
     </a>
     <a href="https://line.me/R/ti/p/@701fnoik">
       <button class="button-70">หัวกรวย ใบ้หวย รวยชิปหาย</button>
     </a>
     <a href="https://line.me/R/ti/p/@701fnoik">
-      <button class="button-70">เลขที่ไม่ออก ไม่อยากพลาด อย่าซื้อตัวนี้</button>
+      <button class="button-70">เลขที่ไม่ออก อย่าซื้อตัวนี้</button>
     </a>
     <a href="https://line.me/R/ti/p/@701fnoik">
       <button class="button-70">ทำนายฝัน แม่นเหมือนจับวาง</button>
@@ -529,7 +626,7 @@ async function shareTarket(typeMarket) {
       <button class="button-70">ดูดวง ลิตขิตฟ้าหรือจะสู้ กุรู้ก่อน</button>
     </a>
     <a href="https://line.me/R/ti/p/@701fnoik">
-      <button class="button-70">เทคนิค เป็นต่อ เล่นให้เฟี้ยว เลี้ยวให้รอด</button>
+      <button class="button-70">เทคนิค เป็นต่อ เล่นให้เฟี้ยว</button>
     </a>
     <a href="https://line.me/R/ti/p/@701fnoik">
       <button class="button-70">แฉ กลโกง หมดตูดเพราะถูกโกง</button>
@@ -641,7 +738,8 @@ async function shareTarket(typeMarket) {
 
 
 .button-70 {
-  background-image: linear-gradient(#0dccea, #0d70ea);
+  /* background-image: linear-gradient(#0dccea, #0d70ea); */
+  background-color: #2DC70B;
   border: 0;
   border-radius: 4px;
   box-shadow: rgba(0, 0, 0, .3) 0 5px 15px;
