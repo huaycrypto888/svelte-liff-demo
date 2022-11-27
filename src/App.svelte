@@ -350,6 +350,83 @@ async function shareTarket(typeMarket) {
                 "color": "#3482FA"
               },
               {
+                  "type": "text",
+                  "text": "ห้องลับสุด VIP Exclusive",
+                  "weight": "bold",
+                  "size": "xl",
+                  "align":"center"
+                },
+                {
+                  "type": "button",
+                  "style": "primary",
+                  "height": "sm",
+                  "action": {
+                    "type": "uri",
+                    "label": "คลิปเด็ด 18+  Onlyfan, คลิปหลุด, คลิปลับ, คลิปฉาว",
+                    "uri": "https://line.me/R/ti/p/@701fnoik"
+                  },
+                },
+                {
+                  "type": "button",
+                  "style": "primary",
+                  "height": "sm",
+                  "action": {
+                    "type": "uri",
+                    "label": "หัวกรวย ใบ้หวย รวยชิปหาย",
+                    "uri": "https://line.me/R/ti/p/@701fnoik"
+                  },
+                },
+                {
+                  "type": "button",
+                  "style": "primary",
+                  "height": "sm",
+                  "action": {
+                    "type": "uri",
+                    "label": "เลขที่ไม่ออก ไม่อยากพลาด อย่าซื้อตัวนี้",
+                    "uri": "https://line.me/R/ti/p/@701fnoik"
+                  },
+                },
+                {
+                  "type": "button",
+                  "style": "primary",
+                  "height": "sm",
+                  "action": {
+                    "type": "uri",
+                    "label": "ทำนายฝัน แม่นเหมือนจับวาง",
+                    "uri": "https://line.me/R/ti/p/@701fnoik"
+                  },
+                },
+                {
+                  "type": "button",
+                  "style": "primary",
+                  "height": "sm",
+                  "action": {
+                    "type": "uri",
+                    "label": "ดูดวง ลิตขิตฟ้าหรือจะสู้ กุรู้ก่อน",
+                    "uri": "https://line.me/R/ti/p/@701fnoik"
+                  },
+                },
+                {
+                  "type": "button",
+                  "style": "primary",
+                  "height": "sm",
+                  "action": {
+                    "type": "uri",
+                    "label": "เทคนิค เป็นต่อ เล่นให้เฟี้ยว เลี้ยวให้รอด",
+                    "uri": "https://line.me/R/ti/p/@701fnoik"
+                  },
+                },
+                {
+                  "type": "button",
+                  "style": "primary",
+                  "height": "sm",
+                  "action": {
+                    "type": "uri",
+                    "label": "แฉ กลโกง หมดตูดเพราะถูกโกง",
+                    "uri": "https://line.me/R/ti/p/@701fnoik"
+                  },
+                },
+              {
                 "type": "box",
                 "layout": "vertical",
                 "contents": [],
@@ -434,9 +511,29 @@ async function shareTarket(typeMarket) {
   <br>
   <button class="button-91" on:click={() => shareTarket(4)}>แชร์ เพื่อรับรายได้ 2% จากยอดฝาก</button>
   <!-- <button class="button-91" on:click={sendMessage}>ตรวจสอบรายได้ </button> -->
-  <!-- <form action="https://line.me/R/ti/p/@701fnoik">
-    <input class="button-70"  type="submit" value="google">
-</form> -->
+  <h3>กลุ่มลับ VIP Exclusive</h3>
+
+    <a href="https://line.me/R/ti/p/@701fnoik">
+      <button class="button-70">คลิปเด็ด 18+  Onlyfan, คลิปหลุด, คลิปลับ, คลิปฉาว</button>
+    </a>
+    <a href="https://line.me/R/ti/p/@701fnoik">
+      <button class="button-70">หัวกรวย ใบ้หวย รวยชิปหาย</button>
+    </a>
+    <a href="https://line.me/R/ti/p/@701fnoik">
+      <button class="button-70">เลขที่ไม่ออก ไม่อยากพลาด อย่าซื้อตัวนี้</button>
+    </a>
+    <a href="https://line.me/R/ti/p/@701fnoik">
+      <button class="button-70">ทำนายฝัน แม่นเหมือนจับวาง</button>
+    </a>
+    <a href="https://line.me/R/ti/p/@701fnoik">
+      <button class="button-70">ดูดวง ลิตขิตฟ้าหรือจะสู้ กุรู้ก่อน</button>
+    </a>
+    <a href="https://line.me/R/ti/p/@701fnoik">
+      <button class="button-70">เทคนิค เป็นต่อ เล่นให้เฟี้ยว เลี้ยวให้รอด</button>
+    </a>
+    <a href="https://line.me/R/ti/p/@701fnoik">
+      <button class="button-70">แฉ กลโกง หมดตูดเพราะถูกโกง</button>
+    </a>
 
     <!-- <hr /> -->
     <!-- <h3>ได้โปรด อ่านด้านล่าง หนูขอร้อง อิคึ..อิคึ..</h3>
@@ -542,7 +639,7 @@ async function shareTarket(typeMarket) {
 }
 
 
-/* 
+
 .button-70 {
   background-image: linear-gradient(#0dccea, #0d70ea);
   border: 0;
@@ -560,8 +657,9 @@ async function shareTarket(typeMarket) {
   -webkit-user-select: none;
   touch-action: manipulation;
   margin: auto;
+  margin-bottom: 6px;
   width: 300px;
-} */
+}
 
 
 /* 
